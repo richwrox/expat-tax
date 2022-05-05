@@ -13,7 +13,7 @@
                   </select>
 
                  </div>
-                  <div class="col progress-text">1</div>
+                  <div class="col progress-text">0% Complete</div>
                </div>
 
 
