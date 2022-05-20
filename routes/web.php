@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::get('/instructions', 'HomeController@index');
 Route::get('/general-questions', 'GeneralQuestionsController@index');
+Route::get('/personal-information', 'GeneralInformationController@personalInfo');
+Route::get('/id-verification', 'GeneralInformationController@idVerification');
+Route::get('/payment-for-our-service', 'GeneralInformationController@paymentForOurService');
+Route::get('/wages', 'IncomeController@showWages');
