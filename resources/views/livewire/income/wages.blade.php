@@ -236,12 +236,264 @@
                                                                 </div>
                                                         </div>
 
+                                                        @if($DidYouReceiveAnyCompensation === 'yes')
 
+                                                           @for($i=0; $i < $NumberofFormsToUploadDidYouReceiveAnyCompensation; $i++ )
+                       													<div class="form-group mt-4">
+                                                                        <div class="file btn btn-outline-success cs-file-upload">
+                                                                           <i class="fa fa-upload mr-4"></i> Upload your forms
+                                                                        <input wire:model="UploadFileCompensationForms" type="file"  />
+                                                                        </div>
+                                                                    	</div>
+                                                            @endfor
+
+                                                             <div class="mt-2 d-flex">
+                                                        	<label  class="light-grey mr-3" 
+                                                                for="">Amount of forms uploaded			
+                                                            </label> 
+
+                                                            <select wire:model="NumberofFormsToUploadDidYouReceiveAnyCompensation" class="">
+                                                            	<option value="0">--</option>
+                                                            	<option value="1">1</option>
+                                                            	<option value="2">2</option>
+                                                            	<option value="3">3</option>
+                                                            	<option value="4">4</option>
+                                                            	<option value="5">5</option>
+                                                            	<option value="6">6</option>
+                                                            	<option value="7">7</option>
+                                                            	<option value="8">8</option>
+                                                            	<option value="9">9</option>
+                                                            	<option value="10">10</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                        @endif
+
+
+                                                       <div class="row mt-4">
+                                                          <div class="col-md-8 text-info">
+                                                          <span>
+                                                          <i class="fa fa-regular fa-circle-info "></i> 
+															 Please note that as an Australian, there may be some documents listed below that you can’t obtain yet. Therefore, we’ll need to wait for these documents to be available.
+                                                                    	[In order to prepare an accurate US return, your latest Australian tax return and other documents are required. The Australian tax return is needed in order to determine amounts of foreign tax credit we can use on your return (to reduce tax liability), based on the Australian tax amounts.].<br/> For example: If you are filing 2018, 2019 and 2020 US Tax returns then we need the tax returns for years ending June 30th, 2018, June 30th, 2019, June 30th 2020 and June 30th 2021.<br/> If you are filing 2020 US Tax return then we need the two tax returns for years ending June 30th 2020 and June 30th 2021
+															 </span>
+															 <p>
+															 	
+															 </p>
+                                                          </div>
+                                                        </div>
+
+                                                         <div class="form-group mt-2">
+                                                                <div class="form-group light-grey">
+                                                                    <label class="mb-2" for="">Upload your Australian income tax returns and Notice of Assessments for all relevant tax years <!-- <i class="fa fa-regular fa-circle-info tp" data-bs-toggle="tooltip" data-bs-placement="top" html="true" title="Please note that as an Australian, there may be some documents listed below that you can’t obtain yet. Therefore, we’ll need to wait for these documents to be available.
+                                                                    	[In order to prepare an accurate US return, your latest Australian tax return and other documents are required. The Australian tax return is needed in order to determine amounts of foreign tax credit we can use on your return (to reduce tax liability), based on the Australian tax amounts.]. For example: If you are filing 2018, 2019 and 2020 US Tax returns then we need the tax returns for years ending June 30th, 2018, June 30th, 2019, June 30th 2020 and June 30th 2021. If you are filing 2020 US Tax return then we need the two tax returns for years ending June 30th 2020 and June 30th 2021">
+                                                                    	
+                                                                    </i>  -->
+
+                                                                    	@error('AustralianIncomeTax') 
+                                                                    	<span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                    
+
+                                                                </div>
+                                                        </div>
+
+                                                        @for($i=0; $i < $NumberofFormsToUploadAustralianIncomeTax; $i++ )
+                       													<div class="form-group mt-4">
+                                                                        <div class="file btn btn-outline-success cs-file-upload">
+                                                                           <i class="fa fa-upload mr-4"></i> Upload your forms
+                                                                        <input wire:model="UploadFileAustralianIncomeTax{{$i}}" type="file"  />
+                                                                        </div>
+                                                                    	</div>
+                                                            @endfor
+
+
+                                                        <div class="mt-2 d-flex">
+                                                        	<label  class="light-grey mr-3" 
+                                                                for="">Amount of forms uploaded			
+                                                            </label> 
+
+                                                            <select wire:model="NumberofFormsToUploadAustralianIncomeTax" class="">
+                                                            	<option value="0">--</option>
+                                                            	<option value="1">1</option>
+                                                            	<option value="2">2</option>
+                                                            	<option value="3">3</option>
+                                                            	<option value="4">4</option>
+                                                            	<option value="5">5</option>
+                                                            	<option value="6">6</option>
+                                                            	<option value="7">7</option>
+                                                            	<option value="8">8</option>
+                                                            	<option value="9">9</option>
+                                                            	<option value="10">10</option>
+                                                            </select>
+
+                                                        </div>
+               											{{--  --}}
+
+
+               											<div class="form-group mt-4">
+                                                                <div class="form-group light-grey">
+                                                                    <label class="mb-2" for="">Pay-slips from December 
+                                                                    	@error('PayFromDeclips') 
+                                                                    	<span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                    
+
+                                                                </div>
+                                                        </div>
+                                                        <div class="row">
+                                                          <div class="col-md-8 text-info">
+                                                          <span>
+                                                          <i class="fa fa-regular fa-circle-info "></i> 
+															 For example: If you are filing 2018, 2019 and 2020 US Tax returns then we need the pay-slips for December 2017, December 2018, December 2019 and December 2020.  If you are filing 2020 US Tax return then we need from December 2019 and December 2020 <br/>
+															 For example: If you are filing 2018, 2019 and 2020 US Tax returns then we need the PAYG slips for the years ending  June 30th, 2018, June 30th, 2019, June 30th 2020 and June 30th 2021. For example: If you are filing 2020 US Tax return then we need the PAYG slips for years ending June 30th, 2020 and June 30th 2021.
+															 </span>
+															 <p>
+															 	
+															 </p>
+                                                          </div>
+                                                        </div>
+
+
+                                                        @for($i=0; $i < $UploadFilePayFromDec; $i++ )
+                                                        <div class="form-group mt-4">
+                                                                <<div class="form-group mt-4">
+                                                                        <div class="file btn btn-outline-success cs-file-upload">
+                                                                           <i class="fa fa-upload mr-4"></i> Upload your forms
+                                                                        <input wire:model="UploadFilePayFromDec" type="file"  />
+                                                                        </div>
+                                                                    	</div>
+                                                        </div>
+                                                        @endfor
+
+                                                        <div class="mt-2 d-flex">
+                                                        	<label  class="light-grey mr-3" 
+                                                                for="">Amount of forms uploaded			
+                                                            </label> 
+
+                                                            <select wire:model="UploadFilePayFromDec" class="">
+                                                            	<option value="0">--</option>
+                                                            	<option value="1">1</option>
+                                                            	<option value="2">2</option>
+                                                            	<option value="3">3</option>
+                                                            	<option value="4">4</option>
+                                                            	<option value="5">5</option>
+                                                            	<option value="6">6</option>
+                                                            	<option value="7">7</option>
+                                                            	<option value="8">8</option>
+                                                            	<option value="9">9</option>
+                                                            	<option value="10">10</option>
+                                                            </select>
+
+                                                        </div>
+               											{{--
+               												<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+															  Tooltip on top
+															</button>
+               											  --}}
 
                                                         
 
+                                                        <div class="form-group mt-4">
+                                                                <div class="form-group col-md-7 light-grey">
+                                                                    <label class="mb-2" for="">Did you receive any non taxed distribution from superannuation acocunts for the relevant calender year/s you're filing now?  @error('NonTaxDistribution') <span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                    
+                                                                    <input wire:model="NonTaxDistribution" type="radio" class="btn-check" id="NonTaxDistributionYes" 
+                                                                    name="NonTaxDistribution" value="yes">
+                                                                    <label class="btn btn-outline-secondary mr-3 btn-site-primary" for="NonTaxDistributionYes">Yes</label>
 
-                                             <div class=" offset-md-4">
+                                                                    <input wire:model="NonTaxDistribution" type="radio" class="btn-check" id="NonTaxDistributionNo" name="NonTaxDistribution" value="no" >
+                                                                    <label class="btn btn-outline-secondary btn-site-primary mr-3" 
+                                                                    for="NonTaxDistributionNo">No</label>
+
+                                                                </div>
+                                                        </div>
+
+                                                        @if($NonTaxDistribution === 'yes')
+                                                         <div class="form-group mt-4">
+                                                                <div class="form-group light-grey">
+                                                                    <label class="mb-2" for="">Provide distribution amounts  @error('AmountDistributed') <span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                    <div class="col-md-2 ">
+                                                                    <input type="text" wire:model="AmountDistributed" rows="3" class="form-control" />
+                                                                     </div>
+                                                                </div>
+                                                        </div>
+                                                        @endif
+
+
+
+                                                        <div class="form-group mt-4">
+                                                                <div class="form-group col-md-7 light-grey">
+                                                                    <label class="mb-2" for="">Were you employed by more than one employer?	  @error('NumberofEmployers') <span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                    
+                                                                    <input wire:model="NumberofEmployers" type="radio" class="btn-check" id="NumberofEmployersYes" 
+                                                                    name="NumberofEmployers" value="yes">
+                                                                    <label class="btn btn-outline-secondary mr-3 btn-site-primary" for="NumberofEmployersYes">Yes</label>
+
+                                                                    <input wire:model="NumberofEmployers" type="radio" class="btn-check" id="NumberofEmployersNo" name="NumberofEmployers" value="no" >
+                                                                    <label class="btn btn-outline-secondary btn-site-primary mr-3" 
+                                                                    for="NumberofEmployersNo">No</label>
+
+                                                                </div>
+                                                        </div>
+
+
+                                                        <div class="form-group mt-4">
+                                                                <div class="form-group col-md-7 light-grey">
+                                                                    <label class="mb-2" for="">Provide exact dates you worked for each employer		  @error('EmployerDetails') <span class="error text-danger">*</span> @enderror
+                                                                    </label><br/>
+                                                                </div>
+                                                        </div>
+
+
+                                                        <div class="row" id="show_item03">
+                                                    <div class="col-md-3 ml-5">
+                                                        <div class="form-group">
+                                                            <div class="form-group light-grey">
+                                                                <div class="form-group">
+                                                                    <div class="form-group light-grey button_group">
+                                                                        
+                                                                       
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row mt-2">
+                                                                    <div class="col-md-12 ml-5">
+                                                                        <div class="form-group">
+                                                                            <div class="form-group light-grey">
+                                                                              <label class="mb-2" for="">Employer Name		  @error('EmployerName') <span class="error text-danger">*</span> @enderror
+                                                                    		</label>
+
+                                                                    		<input type="text" class="form-control" name="">
+
+                                                                    		<label class="mb-2" for="">Dates of Employment		  @error('DatesofEmployment') <span class="error text-danger">*</span> @enderror
+                                                                    		</label>
+
+                                                                    		<input type="text" class="form-control" name="">
+                                                                                
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class=" col-md-3 mt-3">
+                                                        <button class="btn btn-success add_item_btn03 mr-5"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                                                    </div>
+                                                </div>
+
+
+                                             <div class=" offset-md-7">
                                                         <div class="rows mr-auro">
                                                           
                                                           <div class="d-flex">
@@ -261,4 +513,19 @@
 
                                         </div>
                                         {{-- End Step 1 --}}
+
+
+
+
+
+
+
+
+<script>
+$('.tp').tooltip({
+  customClass:'my-custom'
+});
+
+</script>
+
 </div>

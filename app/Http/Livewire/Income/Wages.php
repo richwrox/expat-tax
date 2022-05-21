@@ -12,7 +12,8 @@ class Wages extends Component
 	use GlobalService;
 	public $currentStep=1;
 	public $DoyouHaveSalaryIncome,$DoyouHaveW2Forms,$NumberofFormsToUpload,$DidYouFileIsraliTax,$WasIncomeReceivedOnTlush;
-	public $NumberofFormsToUploadIsraeliTaxReturn,$DidYouReceiveAnyCompensation;
+	public $NumberofFormsToUploadIsraeliTaxReturn,$DidYouReceiveAnyCompensation,$UploadFileCompensationForms,$NumberofFormsToUploadDidYouReceiveAnyCompensation,$NumberofFormsToUploadAustralianIncomeTax;
+	public $UploadFilePayFromDec,$PayFromDeclip,$NonTaxDistribution,$AmountDistributed,$UploadFileAustralianIncomeTax,$NumberofEmployers;
 
 
     public function render()
@@ -26,8 +27,11 @@ class Wages extends Component
                 'DoyouHaveSalaryIncome'=>'required',
                 'DoyouHaveW2Forms'=>'required',
                 'WasIncomeReceivedOnTlush'=>'required',
-                'DidYouReceiveAnyCompensation'=>'required'
-                //'NonWillfulWording'=>'required_if:StreamLinedFile,===,yes'
+                'DidYouReceiveAnyCompensation'=>'required',
+                'UploadFileAustralianIncomeTax'=>'required',
+                'NonTaxDistribution'=>'required',
+                'AmountDistributed'=>'required_if:NonTaxDistribution,===,yes',
+                'NumberofEmployers'=>'required'
 
             ]);
     	// $this->progressUpdate();
