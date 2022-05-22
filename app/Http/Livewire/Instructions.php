@@ -9,7 +9,7 @@ class Instructions extends Component
 	public $selectedYear;
 	public $requestType;
     public $setTaxYear;
-	
+
 
 	protected $listeners = ['selectYear','setTaxYear'];
 
@@ -44,11 +44,11 @@ class Instructions extends Component
 
 
         $data= ['selectedYear'=>$this->selectedYear, 'requestType'=>$this->requestType];
-       
+
         \Session::put('progress',1);
         \Session::put('instructions',$data);
 
-       
+
         return redirect()->to('/general-questions');
     }
 

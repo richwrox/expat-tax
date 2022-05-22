@@ -18,7 +18,7 @@
         <link rel="stylesheet" rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/sidebars.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
-        
+
 
         <style>
           .bd-placeholder-img {
@@ -44,13 +44,13 @@
     </head>
 
    <body class="d-flex flex-column">
-    
+
     <div class="d-flex flex-column flex-grow-1">
 
 
 
 <div class="container-fluid px-5 ">
-  
+
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center  ">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -74,7 +74,7 @@
 <main>
 
   <div class="container-fluid px-4 py-1 main-outter box">
-    
+
     <div class="inner-wrapper ">
 
       <header  class="mx-auto bread-crumbs py-4">
@@ -82,7 +82,7 @@
       </header>
 
       <div class="content-wrapper artboard container">
-       
+
         <div class="row">
 
             <div class="col-md-3 side-bar-wrapper">
@@ -91,17 +91,17 @@
 
 
               <nav class="sidebar">
-                   
+
                    <ul class="list-unstyled ps-0 sidebar-nav mt-4">
                        <li  class="mb-2 {{ Request::is('instructions*') ? 'active' : '' }}">
                           <button class="cs-btn btn-single-item align-items-center rounded collapsed px-4"  aria-expanded="false">
                            <a href="/instructions"> Instructions </a>
                           </button>
-                          
+
                         </li>
 
                         <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" 
+                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4"
                           data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
                             General Information
                           </button>
@@ -110,7 +110,7 @@
                               <li class="{{ Request::is('general-questions*') ? 'active' : '' }}">
                                 <a href="/general-questions" class="link-dark rounded">General Questions</a></li>
                               <li class="{{ Request::is('personal-information*') ? 'active' : '' }}"><a href="/personal-information" class="link-dark rounded">Personal Information</a></li>
-                              
+
                               <li class="{{ Request::is('id-verification*') ? 'active' : '' }}">
                                 <a href="/id-verification" class="link-dark rounded">ID verification</a></li>
 
@@ -118,7 +118,7 @@
                             </ul>
                           </div>
                         </li>
-                        
+
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
                             Income
@@ -140,10 +140,16 @@
                           </button>
                           <div class="collapse" id="dashboard-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">Tax Filing</a></li>
-                              <li><a href="#" class="link-dark rounded">Estimate and Other Payments</a></li>
-                              <li><a href="#" class="link-dark rounded">Stimulus</a></li>
-                             
+                              <li class="{{ Request::is('tax-filing*') ? 'active' : '' }}">
+                                <a href="{{ route('tax-filing') }}" class="link-dark rounded">Tax Filing</a>
+                             </li>
+
+                                <li class="{{ Request::is('estimate-payments*') ? 'active' : '' }}">
+                                    <a href="{{ route('estimate-payments') }}" class="link-dark rounded">Estimate and Other Payments</a>
+                                </li>
+                                <li class="{{ Request::is('stimulus*') ? 'active' : '' }}">
+                                    <a href="{{ route('stimulus') }}" class="link-dark rounded">Stimulus</a>
+                                </li>
                             </ul>
                           </div>
                         </li>
@@ -157,7 +163,7 @@
                               <li><a href="#" class="link-dark rounded">FBR and 8938</a></li>
                               <li><a href="#" class="link-dark rounded">5471 Foreign Corporation</a></li>
                               <li><a href="#" class="link-dark rounded">3520 Foreign</a></li>
-                              
+
                             </ul>
                           </div>
                         </li>
@@ -181,9 +187,9 @@
                           <button class="cs-btn btn-single-item align-items-center rounded collapsed px-4"  aria-expanded="false">
                            <a href="#"> Summary </a>
                           </button>
-                          
+
                         </li>
-     
+
                       </ul>
 
 
@@ -199,7 +205,7 @@
                  @yield('content')
               <!-- Content Ends Here -->
             </div>
-            
+
         </div>
 
       </div>
@@ -221,7 +227,7 @@
 
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
     <script src="{{ asset('assets/js/sidebar.js') }}"></script>
@@ -237,19 +243,19 @@
         // this will get the full URL at the address bar
         var url = window.location.href;
          let activeLink = $('.active').parent().parent();
-         activeLink.addClass('show') 
+         activeLink.addClass('show')
         // passes on every "a" tag
         $(".sidebar-nav li ul li a").each(function() {
             // checks if its the same on the address bar show
              if (url == (this.href)) {
-                
-                 
-               
+
+
+
             }
         });
-    });  
+    });
 
-          
+
 </script>
 
 

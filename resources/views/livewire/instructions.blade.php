@@ -1,28 +1,28 @@
 <div>
-        <div class="col-md-12 ml-5">                                              
-          <div class="form-group">                                              
+        <div class="col-md-12 ml-5">
+          <div class="form-group">
               <div class="form-group light-grey">
                 <label for="">How many tax returns should we prepare for you?</label>
 
                 <div class="mt-4">
                 	<input type="radio"   class="btn-check form-check-input " name="options-outlined" id="success-outlined" autocomplete="off" value='1' onchange="">
-                    <label wire:click="$emit('selectYear', 'single' )" class="btn btn-outline-secondary mr-3 btn-site-primary" for="success-outlined">One Year</label> 
+                    <label wire:click="$emit('selectYear', 'single' )" class="btn btn-outline-secondary mr-3 btn-site-primary" for="success-outlined">One Year</label>
 
                     <input type="radio" class="btn-check form-check-input" name="options-outlined" id="danger-outlined" autocomplete="off" onchange="" value='2'>
-                    <label wire:click="$emit('selectYear', 'multiple' )" class="btn btn-outline-secondary btn-site-primary" for="danger-outlined">More Than One Year</label> 
+                    <label wire:click="$emit('selectYear', 'multiple' )" class="btn btn-outline-secondary btn-site-primary" for="danger-outlined">More Than One Year</label>
                 </div>
-                                                                                                                                                             
-              </div>                                                 
-          </div>                                                                                                             
+
+              </div>
+          </div>
 	   </div>
 
 	   @if($requestType == 'single')
 
 
                                                 <div id="singleForm" class="class_hidden">
-                                                    
+
                                                     <form action="includes/filing_years.inc.php" method="POST">
-                                                        
+
                                                         <div class="row mt-5">
                                                             <div class="col-md-12 ml-5 mt-3">
                                                                 <div class="form-group">
@@ -35,14 +35,14 @@
                                                                         <label wire:click="$emit('setTaxYear', '{{$year}}' )" class="btn btn-outline-secondary mr-3 btn-site-primary" for="btn-check-1-outlined-{{$year}}">{{$year}}</label>
 
                                                                         @endforeach
-                                                                        
+
 
                                                                     </div>
                                                                     <p> @error('selectedYear') <span class="error text-danger">{{ $message }}</span> @enderror</p>
                                                                 </div>
                                                             </div>
                                                         </div>
-    
+
                                                         <div class="row mt-3">
                                                             <div class="col-md-12 ml-5">
                                                                 <div class="form-group">
@@ -51,8 +51,8 @@
 
                                                             </div>
                                                         </div>
-    
-    
+
+
                                                         <div class="row">
                                                             <div class="col-md-6 offset-md-6">
                                                                 <div class="row mr-auro">
@@ -63,11 +63,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
-                                                        
+
+
                                                     </form>
-                                                    
-                                                
+
+
                                                 </div>
 
 	   @endif
