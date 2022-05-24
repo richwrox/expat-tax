@@ -17,4 +17,8 @@ class TaxesDeductionsController extends Controller
     public function showStimulus(){
     	return view('taxes_deductions.stimulus');
     }
+
+    public function showAdvancedChildTax(){
+    	return view('taxes_deductions.advanced-child-tax');
+    }
 }

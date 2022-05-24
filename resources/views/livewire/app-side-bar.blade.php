@@ -1,6 +1,5 @@
 <div>
-    <header class="px-4">
-               
+    <header class="px-4">    
                <div class="row mb-4">
                  <div class="col tax-year-port-wrapper">
                    <select class="">
@@ -15,7 +14,6 @@
                  </div>
                   <div class="col progress-text">{{$progress}}% Complete</div>
                </div>
-
 
                <div id="progress-bar-container">
                   <div class="progress-bar-child progress pr-bg-start" role="progressbar" style="width: {{$progress}}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"> </div>

@@ -22,6 +22,14 @@ class EstimatePayment extends Component
 
 
     public function submitEstimatePayment(){
+        $validatedData = $this->validate([
+            'DidYouMakeEstimatedTaxPayment' => 'required',
+            'DidYouMakeEstimatedTaxPayment' => 'required',
+            'PaymentDateOne' => 'required_if:DidYouMakeEstimatedTaxPayment,==,yes',
+            'AmountForPaymentDateOne' => 'required_if:DidYouMakeEstimatedTaxPayment,==,yes',
+        ],
+        []);
+
         $this->currentStep ++;
         $this->progressUpdate();
         return redirect()->route('stimulus');

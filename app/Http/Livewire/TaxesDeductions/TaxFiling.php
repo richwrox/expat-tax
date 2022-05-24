@@ -20,6 +20,14 @@ class TaxFiling extends Component
 
 
     public function submitTaxFiling(){
+        $validatedData = $this->validate([
+            'DidYouPayForTuition' => 'required',
+            'DoYouHaveStudenLoan' => 'required',
+            'NumberOfFormsUploadedForTuitionPayment'=>'required_if:DidYouPayForTuition,==,yes',
+            'NumberOfFormsUploadedForStudentLoanInterest'=>'required_if:DoYouHaveStudenLoan,==,yes',
+        ],
+        []);
+
         $this->currentStep ++;
         $this->progressUpdate();
         return redirect()->route('estimate-payments');

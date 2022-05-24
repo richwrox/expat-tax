@@ -9,4 +9,10 @@ class IncomeController extends Controller
     public function showWages(){
     	return view('income.wages');
     }
+
+    public function showBusinessIncome()
+    {
+        return view('income.business-income');
+    }
 }
+

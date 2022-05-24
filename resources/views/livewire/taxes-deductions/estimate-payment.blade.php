@@ -46,7 +46,7 @@
                 <div class="col-md-4 ml-5">
                     <div class="form-group">
                         <div class="form-group light-grey">
-                            <label for="">Payment Date</label><br>
+                            <label for="">Payment Date @error('PaymentDateOne')<span class="error">*</span> @enderror</label><br>
                             <input wire:model="PaymentDateOne" type="date" class="form-control col-md-2">
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                 <div class="col-md-4 ml-5">
                     <div class="form-group">
                         <div class="form-group light-grey">
-                            <label for="">Amount</label><br>
+                            <label for="">Amount @error('AmountForPaymentDateOne')<span class="error">*</span> @enderror</label><br>
                             <input wire:model="AmountForPaymentDateOne" type="text" class="form-control col-md-2" value="$">
                         </div>
                     </div>

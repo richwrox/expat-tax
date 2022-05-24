@@ -52,55 +52,47 @@
 
                     </div>
                 </div>
-
             </div>
 
 
         <div class="row mt-3" id="">
-                    @for($i=0; $i < $NumberOfFormsUploadedForTuitionPayment; $i++)
-                       <div class="col-md-9 ml-5 mt-2">
-                       <div class="form-group">
-                           <div class="form-group light-grey">
-                               <div class="form-group ">
-                                   <div class="file btn btn-outline-success cs-file-upload">
-                                      <i class="fa fa-upload mr-4"></i> Upload Forms
-                                   <input wire:model="wwforms" type="file"  />
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                    @endfor
+            <div class="col-md-3 mt-2">
+                <div class="form-group light-grey">
+                    <label class="mb-2" for="">Amount of forms uploaded  @error('NumberOfFormsUploadedForTuitionPayment')<span class="error">*</span> @enderror</label><br>
+                    <select wire:model="NumberOfFormsUploadedForTuitionPayment" class="form-control">
+                      <option value="0">----</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
 
 
-                   <div class="mt-2 d-flex">
-                       <label  class="light-grey" for="">Amount of forms uploaded
-                       </label>
-
-                       <select wire:model="NumberOfFormsUploadedForTuitionPayment" class="">
-                           <option value="0">--</option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           <option value="6">6</option>
-                           <option value="7">7</option>
-                           <option value="8">8</option>
-                           <option value="9">9</option>
-                           <option value="10">10</option>
-                       </select>
-
-                   </div>
+            @for($i=0; $i < $NumberOfFormsUploadedForTuitionPayment; $i++)
+                <div class="col-md-12 ml-5 mt-2">
+                    <div class="form-group">
+                        <div class="form-group light-grey">
+                            <div class="form-group ">
+                                <div class="file btn btn-outline-success cs-file-upload">
+                                    <i class="fa fa-upload mr-4"></i> Upload Forms
+                                <input wire:model="wwforms" type="file"  />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endfor
            </div>
-
-
-
         @endif
 
         <br><br>
-
-
 
 
 
@@ -136,9 +128,28 @@
             </div>
 
 
-        <div class="row mt-3" id="">
-                    @for($i=0; $i < $NumberOfFormsUploadedForStudentLoanInterest; $i++)
-                       <div class="col-md-9 ml-5 mt-2">
+            <div class="row mt-3" id="">
+                <div class="col-md-3 mt-2">
+                    <div class="form-group light-grey">
+                        <label class="mb-2" for="">Amount of forms uploaded  @error('NumberOfFormsUploadedForStudentLoanInterest')<span class="error">*</span> @enderror</label><br>
+                        <select wire:model="NumberOfFormsUploadedForStudentLoanInterest" class="form-control">
+                          <option value="0">----</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                @for($i=0; $i < $NumberOfFormsUploadedForStudentLoanInterest; $i++)
+                    <div class="col-md-12 ml-5 mt-2">
                        <div class="form-group">
                            <div class="form-group light-grey">
                                <div class="form-group ">
@@ -151,25 +162,6 @@
                        </div>
                    </div>
                     @endfor
-
-
-                   <div class="mt-2 d-flex">
-                       <label  class="light-grey" for="">Amount of forms uploaded
-                       </label>
-
-                       <select wire:model="NumberOfFormsUploadedForStudentLoanInterest" class="">
-                           <option value="0">--</option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                           <option value="6">6</option>
-                           <option value="7">7</option>
-                           <option value="8">8</option>
-                           <option value="9">9</option>
-                           <option value="10">10</option>
-                       </select>
 
                    </div>
            </div>

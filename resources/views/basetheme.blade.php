@@ -126,8 +126,10 @@
                           <div class="collapse" id="orders-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                               <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li><a href="#" class="link-dark rounded">Foreign Erned Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Business Income</a></li>
+                              <li><a href="#" class="link-dark rounded">Foreign Earned Income</a></li>
+                              <li  class="{{ Request::is('business-income*') ? 'active' : '' }}">
+                                <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
+                              </li>
                               <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
                               <li><a href="#" class="link-dark rounded">Rental Income & Sale of Property</a></li>
                             </ul>
@@ -149,6 +151,10 @@
                                 </li>
                                 <li class="{{ Request::is('stimulus*') ? 'active' : '' }}">
                                     <a href="{{ route('stimulus') }}" class="link-dark rounded">Stimulus</a>
+                                </li>
+
+                                <li class="{{ Request::is('advanced-child-tax-credit-payments-received*') ? 'active' : '' }}">
+                                    <a href="{{ route('advanced-child-tax') }}" class="link-dark rounded">Advanced child tax credit payments</a>
                                 </li>
                             </ul>
                           </div>
