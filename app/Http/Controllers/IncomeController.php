@@ -10,6 +10,11 @@ class IncomeController extends Controller
     	return view('income.wages');
     }
 
+
+    public function showForeignIncome(){
+    	return view('income.foreign-income');
+    }
+
     public function showBusinessIncome()
     {
         return view('income.business-income');
@@ -21,5 +26,8 @@ class IncomeController extends Controller
     }
 
 
+    public function showPassiveIncome()
+    {
+        return view('income.passive-income');
+    }
 }
-

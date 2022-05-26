@@ -819,18 +819,18 @@
         </h3>  
         <div class="row mt-4">
            <div class="form-group">
-            <label class="mb-2" for=""><strong>Do you have Cost of goods sold?</strong>
-                @error('hasCostOfGoodSold') <span class="error text-danger">*</span>
-                @enderror
-            </label><br>
-            <input type="radio" wire:model="hasCostOfGoodSold" class="btn-check form-check-input "
-                    name="hasCostOfGoodSold" id="hasCostOfGoodSoldYes" value='yes'>
-                <label class="btn btn-outline-secondary mr-3 btn-site-primary"
-                    for="hasCostOfGoodSoldYes">Yes</label>
-    
-            <input wire:model="hasCostOfGoodSold" type="radio" class="btn-check form-check-input"
-                name="hasCostOfGoodSold" id="hasCostOfGoodSoldNo" value='no'>
-            <label class="btn btn-outline-secondary btn-site-primary" for="hasCostOfGoodSoldNo">No</label>
+                <label class="mb-2" for=""><strong>Do you have Cost of goods sold?</strong>
+                    @error('hasCostOfGoodSold') <span class="error text-danger">*</span>
+                    @enderror
+                </label><br>
+                <input type="radio" wire:model="hasCostOfGoodSold" class="btn-check form-check-input "
+                        name="hasCostOfGoodSold" id="hasCostOfGoodSoldYes" value='yes'>
+                    <label class="btn btn-outline-secondary mr-3 btn-site-primary"
+                        for="hasCostOfGoodSoldYes">Yes</label>
+        
+                <input wire:model="hasCostOfGoodSold" type="radio" class="btn-check form-check-input"
+                    name="hasCostOfGoodSold" id="hasCostOfGoodSoldNo" value='no'>
+                <label class="btn btn-outline-secondary btn-site-primary" for="hasCostOfGoodSoldNo">No</label>
            </div>
         </div>
 

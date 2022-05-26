@@ -126,11 +126,15 @@
                           <div class="collapse" id="orders-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                               <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li><a href="#" class="link-dark rounded">Foreign Earned Income</a></li>
+                              <li  class="{{ Request::is('foreign-income*') ? 'active' : '' }}">
+                                <a href="{{route('foreign-income')}}" class="link-dark rounded">Foreign Erned Income</a>
+                              </li>
                               <li  class="{{ Request::is('business-income*') ? 'active' : '' }}">
                                 <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
                               </li>
-                              <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
+                              <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
+                                <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
+                              </li>
                               <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
                                 <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
                               </li>
@@ -168,10 +172,16 @@
                           </button>
                           <div class="collapse" id="foreign-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">FBR and 8938</a></li>
-                              <li><a href="#" class="link-dark rounded">5471 Foreign Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">3520 Foreign</a></li>
-
+                              <li class="#">
+                                <a href="#">FBR and 8938</a>
+                              </li>
+                              <li class="{{ Request::is('5471-foreign-corporation*') ? 'active' : '' }}">
+                                <a href="{{route('five471')}}" class="link-dark rounded" class="link-dark rounded">5471 Foreign Corporation</a>
+                              </li>
+                              <li class="{{ Request::is('3520-foreign-corporation*') ? 'active' : '' }}">
+                                <a href="{{route('thirty520')}}"  class="link-dark rounded">3520 Foreign</a>
+                              </li>
+                              
                             </ul>
                           </div>
                         </li>
@@ -237,6 +247,8 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
     <script src="{{ asset('assets/js/sidebar.js') }}"></script>
     <!-- <script src="{{ asset('assets/js/all.min.js') }}"></script> -->
@@ -265,6 +277,8 @@
 
 
 </script>
+
+@yield('js')
 
 
 
