@@ -131,7 +131,9 @@
                                 <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
                               </li>
                               <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Rental Income & Sale of Property</a></li>
+                              <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
+                                <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
+                              </li>
                             </ul>
                           </div>
                         </li>

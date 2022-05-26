@@ -26,6 +26,7 @@ Route::get('/id-verification', 'GeneralInformationController@idVerification');
 Route::get('/payment-for-our-service', 'GeneralInformationController@paymentForOurService');
 Route::get('/wages', 'IncomeController@showWages');
 Route::get('/business-income', 'IncomeController@showBusinessIncome')->name('business-income');
+Route::get('/rental-income', 'IncomeController@showRentalIncome')->name('rental-income');
 Route::get('/tax-filing', 'TaxesDeductionsController@showTaxFiling')->name('tax-filing');
 Route::get('/estimate-payments', 'TaxesDeductionsController@showEstimatePayments')->name('estimate-payments');
 Route::get('/stimulus', 'TaxesDeductionsController@showStimulus')->name('stimulus');

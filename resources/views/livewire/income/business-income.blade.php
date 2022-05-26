@@ -20,7 +20,10 @@
 
    {{-- this if statement changes the form to display based on the step --}}
     @if ($currentStep == 1)
-        <form action="" wire:submit.prevent='submitBusinessInformation'>    
+        <form action="" wire:submit.prevent='submitBusinessInformation'>  
+            <h6 class="section-header">
+                SECTION 1 BUSINESS INFORMATION
+            </h3>  
             <div class="row">
                 <div class="col-md-6">
                     <label class="mb-2" for="">Please select country of operation
@@ -539,7 +542,7 @@
                     @if (($currentStep-1)==0)
                         <div></div>
                         <button type="submit" class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
-                            <span class="pl-3 button_font_small">Submit Income & Expenses <i class="fas fa-arrow-right button_font_small"></i></span>
+                            <span class="pl-3 button_font_small">Income & Expenses <i class="fas fa-arrow-right button_font_small"></i></span>
                         </button>
 
                     @else
@@ -548,7 +551,7 @@
                         </button>
 
                         <button type="submit" class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
-                            <span class="pl-3 button_font_small">Submit Income & Expenses <i class="fas fa-arrow-right button_font_small"></i></span>
+                            <span class="pl-3 button_font_small">Income & Expenses <i class="fas fa-arrow-right button_font_small"></i></span>
                         </button>
                     @endif
 
@@ -558,6 +561,9 @@
 
         {{-- still controlling view based on which step --}}
         @elseif ($currentStep == 2)
+        <h6 class="section-header">
+            SECTION 2 INCOME AND EXPENSES
+        </h3>  
         <div class="row mt-3">
             <form wire:submit.prevent='submitIncomeAndExpenses'>
                 <div class="col-md-12 ml-5">
@@ -797,7 +803,7 @@
                         </button>
     
                          <button type="submit" class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
-                            <span class="pl-3 button_font_small">Submit Income & Expenses <i class="fas fa-arrow-right button_font_small"></i></span>
+                            <span class="pl-3 button_font_small">Cost of Goods Sold <i class="fas fa-arrow-right button_font_small"></i></span>
                         </button>
                     </div>
                 </div>
@@ -808,6 +814,9 @@
 
         {{-- step 3 form cost of good sold --}}
         @elseif ($currentStep == 3)
+        <h6 class="section-header">
+            SECTION 3 COST OF GOODS SOLD
+        </h3>  
         <div class="row mt-4">
            <div class="form-group">
             <label class="mb-2" for=""><strong>Do you have Cost of goods sold?</strong>

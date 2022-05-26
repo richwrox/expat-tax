@@ -14,5 +14,12 @@ class IncomeController extends Controller
     {
         return view('income.business-income');
     }
+
+    public function showRentalIncome()
+    {
+        return view('income.rental-income');
+    }
+
+
 }
 
