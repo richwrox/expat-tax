@@ -15,4 +15,9 @@ class ForeignAccountsEntitiesController extends Controller
     {
         return view('foreign_accounts.3520');
     }
+
+    public function showFBR8938()
+    {
+        return view('foreign_accounts.FBR-8938');
+    }
 }

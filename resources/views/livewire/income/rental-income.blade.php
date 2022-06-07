@@ -543,7 +543,7 @@
         <div class="row mt-5">
             <div class="button-flex">
                 <button type="button" wire:click='prevForm' class="btn btn-outline-secondary mr-auto btn-site-primary color-text-white">
-                    <span class="pl-3 button_font_small"><i class="fas fa-arrow-left button_font_small"></i> Back</span>
+                    <span class="pl-3 button_font_small"><i class="fas fa-arrow-left button_font_small"></i> General Rental Property information</span>
                 </button>
 
                  <button type="button" wire:click='submitIncomeAndExpenses' class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">

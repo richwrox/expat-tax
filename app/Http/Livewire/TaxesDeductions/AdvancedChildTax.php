@@ -9,7 +9,7 @@ use App\Core\GlobalService;
 class AdvancedChildTax extends Component
 {
     use GlobalService;
-	public $currentStep = 1;
+	public $currentStep = 4;
 	public $DidYouReceiveAdvanceChildTax;
     public $AmountOne, $DateOne, $AmountTwo, $DateTwo;
     public $AmountThree,$DateThree,$AmountFour,$DateFour, $AmountFive, $DateFive;
@@ -31,6 +31,11 @@ class AdvancedChildTax extends Component
 
         $this->currentStep ++;
         $this->progressUpdate();
+        return redirect()->route('FBR8938');
+    }
+
+    public function prevForm()
+    {
         return redirect()->route('stimulus');
     }
 }

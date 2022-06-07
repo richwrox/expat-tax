@@ -2,18 +2,12 @@
 
     <div class="row mt-4 stepwizard">
         <div class="col-md-12 ">
-           <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-              <ol class="breadcrumb cs-breadcrumbs">
-
-                 <li class="breadcrumb-item mr-3 {{ $currentStep == 1 ? 'section-active' : '' }}">
-                  <a class="light-grey" href="#"> Estimate Payments </a></li>
-              </ol>
-            </nav>
+            @include('livewire.taxes-deductions.taxes-header')
         </div>
       </div>
 
     {{-- Section 1 --}}
-    <div class="{{ $currentStep != 1 ? 'display-none' : '' }} " id="step-1">
+    <div class="{{ $currentStep != 2 ? 'display-none' : '' }} " id="step-1">
 
         {{-- <div class="row mb-3">
                     <div class="col-md-8 text-info">
@@ -132,15 +126,16 @@
 
         <br><br>
 
-        <div class=" offset-md-6">
-            <div class="rows mr-auro">
-              <div class="d-flex">
-                    <div class="mr-5">
-                        <button wire:click="submitEstimatePayment" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white my-5 mx-5 ml-5">
-                            <span class="pl-3 button_font_small"> Stimulus <i class="fas fa-arrow-right button_font_small"></i></span>
-                        </button>
-                    </div>
-                </div>
+
+        <div class="row mt-5">
+            <div class="button-flex">
+                <button type="button" wire:click='prevForm' class="btn btn-outline-secondary mr-auto btn-site-primary color-text-white">
+                    <span class="pl-3 button_font_small"><i class="fas fa-arrow-left button_font_small"></i> Tax Filing</span>
+                </button>
+
+                 <button type="button" wire:click='submitEstimatePayment' class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
+                    <span class="pl-3 button_font_small">Stimulus <i class="fas fa-arrow-right button_font_small"></i></span>
+                </button>
             </div>
         </div>
 

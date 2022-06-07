@@ -30,6 +30,20 @@ class Thirty520foreigntrusts extends Component
         array_pop($this->trusteeInput);
     }
 
+    // submit form and route to next
+    public function submit3520ForeignTrusts()
+    {
+        // validate data variables
+
+        // route to next form
+        return redirect()->route('s-corporations');
+    }
+
+    public function prevForm()
+    {
+        return redirect()->route('five471');
+    }
+
     public function render()
     {
         return view('livewire.foreign-accounts.thirty520foreigntrusts');

@@ -33,6 +33,11 @@ label{
   width: 200px;
 }
 
+.business-income-date-input
+{
+  width: 200px;
+}
+
 .button-flex
 {
   display: flex;
@@ -78,23 +83,93 @@ label{
   color: green;
 }
 
+/* multibutton select css */
+/* new */
+.my-container{width: 250px; height: 38px; margin: 100px auto;}
+
+div label input {margin-right: 100px;}
+
+.multi-year-btn{
+  margin: 2px;
+  border-radius: 5px;
+  color: #6c757d;
+  border: 1px solid #6c757d;
+  overflow: hidden;
+  float: left;
+}
+
+.multi-year-btn label {
+  width: 70px;
+  height: 40px;
+}
+
+.multi-year-btn label span {
+  text-align: center;
+  padding: 10px;
+  display: block;
+}
+
+.multi-year-btn label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+.multi-year-btn label input + span
+{
+  color: #6c757d;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+
+.multi-year-btn input:checked + span {
+    color: #fff;
+    text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+}
+
+.action span
+{
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.action input:hover + span
+{
+  background-color: #8764AA;
+  color: #fff;
+}
+
+.action input:checked + span
+{
+  background-color: #8764AA;
+  color: #fff;
+}
+/* end of multibutton select */
 
 .rental-short-input
 {
   width: 200px;
 }
 
-.rental-semi-input
+.rental-semi-input,.business-income-semi-input
 {
   width: 300px;
 }
 
-.rental-medium-input
+.rental-medium-input, .business-income-medium-input
 {
   width: 400px;
 }
 
 .rental-multibusiness-toggler .business-income-date-input
+{
+  border: 0px;
+  color: green;
+  border-bottom:2px solid green;
+  padding-bottom: 5px;
+}
+
+.account-select select
 {
   border: 0px;
   color: green;
@@ -109,6 +184,32 @@ label{
   color: rgb(74, 124, 233);
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.info-group p
+{
+  color: rgb(74, 124, 233);
+}
+
+.info-group span
+{
+  margin-left: 5px;
+}
+
+.info-group span i
+{
+  border: 2px solid rgb(74, 124, 233);
+  width: 25px;
+  font-size: 13px;
+  height: 25px;
+  text-align: center;
+  padding: 4px 8.3px;
+  border-radius: 25px;
+}
+
+.number-of-forms
+{
+  /* width: 50px; */
 }
 
 .site-logo{

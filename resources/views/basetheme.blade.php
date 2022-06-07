@@ -120,29 +120,6 @@
                         </li>
 
                         <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                            Income
-                          </button>
-                          <div class="collapse" id="orders-collapse" style="">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li  class="{{ Request::is('foreign-income*') ? 'active' : '' }}">
-                                <a href="{{route('foreign-income')}}" class="link-dark rounded">Foreign Erned Income</a>
-                              </li>
-                              <li  class="{{ Request::is('business-income*') ? 'active' : '' }}">
-                                <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
-                              </li>
-                              <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
-                                <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
-                              </li>
-                              <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
-                                <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </li>
-
-                        <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                             Taxes & Deductions
                           </button>
@@ -167,21 +144,44 @@
                         </li>
 
                         <li class="mb-4">
+                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Income
+                          </button>
+                          <div class="collapse" id="orders-collapse" style="">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
+                              <li  class="{{ Request::is('foreign-income*') ? 'active' : '' }}">
+                                <a href="{{route('foreign-income')}}" class="link-dark rounded">Foreign Earned Income</a>
+                              </li>
+                              <li  class="{{ Request::is('business-income*') ? 'active' : '' }}">
+                                <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
+                              </li>
+                              <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
+                                <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
+                              </li>
+                              <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
+                                <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#foreign-collapse" aria-expanded="false">
                             Foreign Account & Entities
                           </button>
                           <div class="collapse" id="foreign-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li class="#">
-                                <a href="#">FBR and 8938</a>
+                              <li class="{{ Request::is('fbr-8938*') ? 'active' : '' }}">
+                                <a href="{{route('FBR8938')}}" class="link-dark rounded" class="link-dark rounded">FBR and 8938</a>
                               </li>
                               <li class="{{ Request::is('5471-foreign-corporation*') ? 'active' : '' }}">
                                 <a href="{{route('five471')}}" class="link-dark rounded" class="link-dark rounded">5471 Foreign Corporation</a>
                               </li>
-                              <li class="{{ Request::is('3520-foreign-corporation*') ? 'active' : '' }}">
+                              <li class="{{ Request::is('3520-foreign-trusts*') ? 'active' : '' }}">
                                 <a href="{{route('thirty520')}}"  class="link-dark rounded">3520 Foreign</a>
                               </li>
-                              
+
                             </ul>
                           </div>
                         </li>
@@ -192,11 +192,21 @@
                           </button>
                           <div class="collapse" id="corporate-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">C-Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">S-Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">Partnership</a></li>
-                              <li><a href="#" class="link-dark rounded">Forign Corporation 112DF</a></li>
-                              <li><a href="#" class="link-dark rounded">Not Profit</a></li>
+                                <li class="{{ Request::is('c-corporations*') ? 'active' : '' }}">
+                                    <a href="{{route('c-corporations')}}" class="link-dark rounded">C-Corporation</a>
+                                </li>
+                                <li class="{{ Request::is('s-corporations*') ? 'active' : '' }}">
+                                    <a href="{{route('s-corporations')}}" class="link-dark rounded">S-Corporation</a>
+                                </li>
+                                <li class="{{ Request::is('partnership*') ? 'active' : '' }}">
+                                    <a href="{{route('partnership')}}" class="link-dark rounded">Partnerships</a>
+                                </li>
+                                <li class="{{ Request::is('foreign-corporation-112DF*') ? 'active' : '' }}">
+                                    <a href="{{route('foreign-corporation-112DF')}}" class="link-dark rounded">Foreign Corporation 112DF</a>
+                                </li>
+                                <li class="{{ Request::is('not-profit*') ? 'active' : '' }}">
+                                    <a href="{{route('not-profit')}}" class="link-dark rounded">Not Profit</a>
+                                </li>
                             </ul>
                           </div>
                         </li>

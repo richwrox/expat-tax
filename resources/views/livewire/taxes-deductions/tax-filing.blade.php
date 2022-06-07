@@ -2,13 +2,7 @@
 
     <div class="row mt-4 stepwizard">
         <div class="col-md-12 ">
-           <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-              <ol class="breadcrumb cs-breadcrumbs">
-
-                 <li class="breadcrumb-item mr-3 {{ $currentStep == 1 ? 'section-active' : '' }}">
-                  <a class="light-grey" href="#"> Deductions</a></li>
-              </ol>
-            </nav>
+          @include('livewire.taxes-deductions.taxes-header')
         </div>
       </div>
 
@@ -57,10 +51,10 @@
 
 
         <div class="row mt-3" id="">
-            <div class="col-md-3 mt-2">
+            <div class="col-md-4 mt-2">
                 <div class="form-group light-grey">
                     <label class="mb-2" for="">Amount of forms uploaded  @error('NumberOfFormsUploadedForTuitionPayment')<span class="error">*</span> @enderror</label><br>
-                    <select wire:model="NumberOfFormsUploadedForTuitionPayment" class="form-control">
+                    <select wire:model="NumberOfFormsUploadedForTuitionPayment" class="form-control number-of-forms">
                       <option value="0">----</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -169,15 +163,13 @@
         @endif
 
 
-        <div class=" offset-md-6">
-            <div class="rows mr-auro">
-              <div class="d-flex">
-                    <div class="mr-5">
-                        <button wire:click="submitTaxFiling" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white my-5 mx-5 ml-5">
-                            <span class="pl-3 button_font_small"> Estimate and Other Payments <i class="fas fa-arrow-right button_font_small"></i></span>
-                        </button>
-                    </div>
-                </div>
+        <div class="row mt-5">
+            <div class="button-flex">
+               <div></div>
+
+                 <button type="button" wire:click='submitTaxFiling' class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
+                    <span class="pl-3 button_font_small">Estimate and Other Payments <i class="fas fa-arrow-right button_font_small"></i></span>
+                </button>
             </div>
         </div>
 

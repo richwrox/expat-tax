@@ -67,6 +67,19 @@ class Five471foreigncorporation extends Component
     }
 
 
+    // submit form and route to next
+    public function submit5471ForeignCorporation()
+    {
+        // validate data variables
+
+        // route to next form
+        return redirect()->route('thirty520');
+    }
+
+    public function prevForm()
+    {
+        return redirect()->route('FBR8938');
+    }
 
 
     public function render()

@@ -9,7 +9,7 @@ use App\Core\GlobalService;
 class Stimulus extends Component
 {
     use GlobalService;
-	public $currentStep = 1;
+	public $currentStep = 3;
 	public $DidYouReceiveFirstEconomicStimulus,$FirstStimulusDate,$AmountTaxPayerReceivedForFirstStimulus, $AmountSpouseReceivedForFirstStimulus, $TotalAmountReceivedForThirdStimulus;
     public $DidYouReceiveSecondEconomicStimulus,$SecondStimulusDate,$AmountTaxPayerReceivedForSecondStimulus, $AmountSpouseReceivedForSecondStimulus,$TotalAmountReceivedForSecondStimulus;
     public $DidYouReceiveThirdEconomicStimulus,$ThirdStimulusDate,$AmountTaxPayerReceivedForThirdStimulus, $AmountSpouseReceivedForThirdStimulus,$TotalAmountReceivedForFirstStimulus;
@@ -48,6 +48,11 @@ class Stimulus extends Component
 
         $this->currentStep ++;
         $this->progressUpdate();
+        return redirect()->route('advanced-child-tax');
+    }
+
+    public function prevForm()
+    {
         return redirect()->route('estimate-payments');
     }
 

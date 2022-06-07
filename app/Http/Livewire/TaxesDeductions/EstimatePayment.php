@@ -9,7 +9,7 @@ use App\Core\GlobalService;
 class EstimatePayment extends Component
 {
     use GlobalService;
-	public $currentStep = 1;
+	public $currentStep = 2;
 	public $DidYouMakeEstimatedTaxPayment;
     public $PaymentDateOne, $AmountForPaymentDateOne, $PaymentDateTwo, $AmountForPaymentDateTwo;
     public $PaymentDateThree,$AmountForPaymentDateThree,$PaymentDateFour,$AmountForPaymentDateFour;
@@ -33,5 +33,10 @@ class EstimatePayment extends Component
         $this->currentStep ++;
         $this->progressUpdate();
         return redirect()->route('stimulus');
+    }
+
+    public function prevForm()
+    {
+        return redirect()->route('tax-filing');
     }
 }

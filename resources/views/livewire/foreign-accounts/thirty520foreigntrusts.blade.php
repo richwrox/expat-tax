@@ -154,7 +154,20 @@
                 @endforeach
             </div>
             @endif
-
+            
         </div>
     @endif
+
+    <div class="row mt-5">
+        <div class="button-flex">
+            <button type="button" wire:click='prevForm' class="btn btn-outline-secondary mr-auto btn-site-primary color-text-white">
+                <span class="pl-3 button_font_small"><i class="fas fa-arrow-left button_font_small"></i> 5471 Foreign Corporation </span>
+            </button>
+
+             <button type="button" wire:click='submit3520ForeignTrusts' class="btn btn-outline-secondary ml-auto btn-site-primary color-text-white ml-auto">
+                <span class="pl-3 button_font_small">Submit <i class="fas fa-arrow-right button_font_small"></i></span>
+            </button>
+        </div>
+    </div>
+
 </div>
