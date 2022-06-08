@@ -61,7 +61,7 @@
         <a class="me-3 py-2  text-decoration-none" href="#">Questionaire</a>
         <a class="me-3 py-2  text-decoration-none" href="#">My Files</a>
         <a class="me-3 py-2  text-decoration-none" href="#">Contact Us</a>
-        <a class="py-2  text-decoration-none" href="#">Login</a>
+        <a href="/login" class="py-2  text-decoration-none" href="#">Login</a>
       </nav>
     </div>
 
@@ -118,23 +118,9 @@
                             </ul>
                           </div>
                         </li>
-                        
-                        <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                            Income
-                          </button>
-                          <div class="collapse" id="orders-collapse" style="">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li><a href="#" class="link-dark rounded">Foreign Erned Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Business Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Rental Income & Sale of Property</a></li>
-                            </ul>
-                          </div>
-                        </li>
 
-                        <li class="mb-4">
+
+                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                             Taxes & Deductions
                           </button>
@@ -147,6 +133,23 @@
                             </ul>
                           </div>
                         </li>
+                        
+                        <li class="mb-4">
+                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Income
+                          </button>
+                          <div class="collapse" id="orders-collapse" style="">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
+                              <li class="{{ Request::is('foreign-erned-income*') ? 'active' : '' }}" ><a href="/foreign-erned-income" class="link-dark rounded">Foreign Erned Income</a></li>
+                              <li class="{{ Request::is('business-income*') ? 'active' : '' }}" ><a href="/business-income" class="link-dark rounded">Business Income</a></li>
+                              <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
+                              <li><a href="#" class="link-dark rounded">Rental Income & Sale of Property</a></li>
+                            </ul>
+                          </div>
+                        </li>
+
+                       
 
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#foreign-collapse" aria-expanded="false">
@@ -198,6 +201,31 @@
               <!-- Content Start Here -->
                  @yield('content')
               <!-- Content Ends Here -->
+
+              
+               <!-- Modal -->
+                                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h6 class="modal-title" id="exampleModalLabel">Add Comment:</h6>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      
+                                                      <form>
+                                                        <textarea class="form-control" rows="5"></textarea>
+                                                      </form>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      
+                                                      <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+              
             </div>
             
         </div>

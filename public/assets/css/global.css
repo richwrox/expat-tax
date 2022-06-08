@@ -13,7 +13,7 @@ body {
 }
 
 .text-info{
-  color: #5b7ca3;
+  color: #4C78A4 !important;
   font-size: .9em;
 }
 
@@ -175,7 +175,11 @@ body {
 }
 
 
-
+.btn-site-main {
+  color: #fff;
+  background-color: #8764AA;
+  border-color: #8764AA;
+}
 
 .btn-site-primary:hover {
   color: #fff;
@@ -255,6 +259,63 @@ body {
 
 .clear-both{
   clear: both;
+}
+
+
+/* Tooltip container */
+.cs-tooltip {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+/* Tooltip text */
+.cs-tooltip .cs-tooltiptext {
+  visibility: hidden;
+  background-color: #4C78A4;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+
+   width: 500px;
+   bottom: 100%;
+   left: 50%;
+   margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.cs-tooltip:hover .cs-tooltiptext {
+  visibility: visible;
+}
+
+.cs-tooltip .cs-tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 15%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #4C78A4 transparent transparent transparent;
+}
+
+.comment-area{
+  width: 150px;
+  background-color: #ededed;
+  font-size:.7em;
+  position: relative;
+  top:78px;
+  color: #4C78A4;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
 }
 
 /*.btn-site-primary.disabled, .btn-site-primary:disabled {

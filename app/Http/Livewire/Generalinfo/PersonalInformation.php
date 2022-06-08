@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Generalinfo;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-
+use App\Models\Country;
 class PersonalInformation extends Component
 {
     use WithFileUploads;
@@ -15,6 +15,7 @@ class PersonalInformation extends Component
     public $firstName,$lastName,$middleName,$TaxpayerDOB,$occupation,$TaxpayerCitizenShipStatus,$SSN,$SSNFile;
     public $isSpouseUSCitizen;
     public $dependentList;
+    public $dependentFirstName,$dependentSSN,$dependentdod,$dependentMiddleName,$dependentLastName;
 
     public $DoYouHaveITIN,$WantToApplyForITINTaxpayer;
     public $TaxpayerForiegnPassportUpload;
@@ -42,6 +43,13 @@ class PersonalInformation extends Component
 
     public $StreetAddress,$City,$Country,$ZIPCode,$TaxPayerPhone,$TaxpayerEmail; 
 
+    public $RelationshipToTaxpayer;
+
+     public function mount()
+    {
+        $this->countries = Country::get();
+
+    }
 
 	protected $listeners = ['IsUSACitizen','spouseCitizenship','back','backTo'];
     public function render()

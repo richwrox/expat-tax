@@ -46,7 +46,11 @@
                                                         <div class="row mt-3">
                                                             <div class="col-md-12 ml-5">
                                                                 <div class="form-group">
-                                                                    <p class="light-grey">Great, lets start with  {{$selectedYear}} </p>
+                                                                    <p class="light-grey">
+                                                                    @if($selectedYear != null)
+                                                                    Great, lets start with  {{$selectedYear}} 
+                                                                    @endif
+                                                                    </p>
                                                                 </div>
 
                                                             </div>
@@ -57,7 +61,7 @@
                                                             <div class="col-md-6 offset-md-6">
                                                                 <div class="row mr-auro">
                                                                     <div class="mr-5 button_font_small">
-                                                                        <button wire:click="post" type="button" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white mb-5 mt-5 button_font_small">General Question
+                                                                        <button wire:click="post" type="button" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white mb-5 mt-5 button_font_small">General Questions
                                                                         </button>
                                                                     </div>
                                                                 </div>

@@ -82,6 +82,12 @@
                                                 </div>
 
                                                 <div class="row">
+
+                                                    <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
                         
                                                     <div class=" offset-md-7">
                                                         <div class="rows mr-auro">
@@ -176,6 +182,12 @@
 
 
                                                 <div class="row">
+
+                                                    <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
                         
                                                     <div class=" offset-md-4">
                                                         <div class="rows mr-auro">
@@ -192,7 +204,7 @@
 
 
                                                                     <button wire:click="submitFeeData" class="btn btn-outline-secondary btn-site-primary color-text-white my-5 mx-5 ml-5">
-                                                                        <span class="pl-3 button_font_small">Income<i class="fas fa-arrow-right button_font_small"></i></span>
+                                                                        <span class="pl-3 button_font_small">Income <i class="fas fa-arrow-right button_font_small"></i></span>
                                                                     </button>
                                                                 </div>
 
