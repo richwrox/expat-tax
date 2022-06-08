@@ -31,12 +31,14 @@
 
                                                                         @foreach($years as $year)
 
-                                                                         <input wire:click="$emit('setTaxYear', '{{$year}}' )" type="radio" class="btn-check" id="btn-check-1-outlined-{{$year}}" autocomplete="off" name="year" value="2018">
-                                                                        <label class="btn btn-outline-secondary mr-3 btn-site-primary" for="btn-check-1-outlined-{{$year}}">{{$year}}</label>
+                                                                         <input  type="radio" class="btn-check" id="btn-check-1-outlined-{{$year}}" autocomplete="off" name="year" value="2018">
+                                                                        <label wire:click="$emit('setTaxYear', '{{$year}}' )" class="btn btn-outline-secondary mr-3 btn-site-primary" for="btn-check-1-outlined-{{$year}}">{{$year}}</label>
 
                                                                         @endforeach
+                                                                        
 
                                                                     </div>
+                                                                    <p> @error('selectedYear') <span class="error text-danger">{{ $message }}</span> @enderror</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -44,8 +46,13 @@
                                                         <div class="row mt-3">
                                                             <div class="col-md-12 ml-5">
                                                                 <div class="form-group">
-                                                                    <p class="light-grey">Great, lets start with  {{$selectedYear}} </p>
+                                                                    <p class="light-grey">
+                                                                    @if($selectedYear != null)
+                                                                    Great, lets start with  {{$selectedYear}} 
+                                                                    @endif
+                                                                    </p>
                                                                 </div>
+
                                                             </div>
                                                         </div>
     
@@ -54,7 +61,8 @@
                                                             <div class="col-md-6 offset-md-6">
                                                                 <div class="row mr-auro">
                                                                     <div class="mr-5 button_font_small">
-                                                                        <input type="submit"  name="create" value="General Question" class="btn btn-outline-secondary btn-block color-text-white mb-5 mt-5 button_font_small">
+                                                                        <button wire:click="post" type="button" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white mb-5 mt-5 button_font_small">General Questions
+                                                                        </button>
                                                                     </div>
                                                                 </div>
                                                             </div>
