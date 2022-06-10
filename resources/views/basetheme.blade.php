@@ -18,7 +18,7 @@
         <link rel="stylesheet" rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/sidebars.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
-        
+
 
         <style>
           .bd-placeholder-img {
@@ -44,13 +44,13 @@
     </head>
 
    <body class="d-flex flex-column">
-    
+
     <div class="d-flex flex-column flex-grow-1">
 
 
 
 <div class="container-fluid px-5 ">
-  
+
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center  ">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -61,7 +61,7 @@
         <a class="me-3 py-2  text-decoration-none" href="#">Questionaire</a>
         <a class="me-3 py-2  text-decoration-none" href="#">My Files</a>
         <a class="me-3 py-2  text-decoration-none" href="#">Contact Us</a>
-        <a href="/login" class="py-2  text-decoration-none" href="#">Login</a>
+        <a class="py-2  text-decoration-none" href="#">Login</a>
       </nav>
     </div>
 
@@ -74,7 +74,7 @@
 <main>
 
   <div class="container-fluid px-4 py-1 main-outter box">
-    
+
     <div class="inner-wrapper ">
 
       <header  class="mx-auto bread-crumbs py-4">
@@ -82,7 +82,7 @@
       </header>
 
       <div class="content-wrapper artboard container">
-       
+
         <div class="row">
 
             <div class="col-md-3 side-bar-wrapper">
@@ -91,17 +91,17 @@
 
 
               <nav class="sidebar">
-                   
+
                    <ul class="list-unstyled ps-0 sidebar-nav mt-4">
                        <li  class="mb-2 {{ Request::is('instructions*') ? 'active' : '' }}">
                           <button class="cs-btn btn-single-item align-items-center rounded collapsed px-4"  aria-expanded="false">
                            <a href="/instructions"> Instructions </a>
                           </button>
-                          
+
                         </li>
 
                         <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" 
+                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4"
                           data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
                             General Information
                           </button>
@@ -110,7 +110,7 @@
                               <li class="{{ Request::is('general-questions*') ? 'active' : '' }}">
                                 <a href="/general-questions" class="link-dark rounded">General Questions</a></li>
                               <li class="{{ Request::is('personal-information*') ? 'active' : '' }}"><a href="/personal-information" class="link-dark rounded">Personal Information</a></li>
-                              
+
                               <li class="{{ Request::is('id-verification*') ? 'active' : '' }}">
                                 <a href="/id-verification" class="link-dark rounded">ID verification</a></li>
 
@@ -119,8 +119,7 @@
                           </div>
                         </li>
 
-
-                         <li class="mb-4">
+                        <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                             Taxes & Deductions
                           </button>
@@ -143,7 +142,7 @@
                             </ul>
                           </div>
                         </li>
-                        
+
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
                             Income
@@ -151,9 +150,13 @@
                           <div class="collapse" id="orders-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                               <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li class="{{ Request::is('foreign-erned-income*') ? 'active' : '' }}" ><a href="/foreign-erned-income" class="link-dark rounded">Foreign Erned Income</a></li>
-                              <li class="{{ Request::is('business-income*') ? 'active' : '' }}" ><a href="/business-income" class="link-dark rounded">Business Income</a></li>
-                                <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
+                              <li  class="{{ Request::is('foreign-income*') ? 'active' : '' }}">
+                                <a href="{{route('foreign-income')}}" class="link-dark rounded">Foreign Earned Income</a>
+                              </li>
+                              <li  class="{{ Request::is('business-income*') ? 'active' : '' }}">
+                                <a href="{{route('business-income')}}" class="link-dark rounded">Business Income</a>
+                              </li>
+                              <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
                                 <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
                               </li>
                               <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
@@ -162,8 +165,6 @@
                             </ul>
                           </div>
                         </li>
-
-                       
 
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#foreign-collapse" aria-expanded="false">
@@ -214,9 +215,9 @@
                           <button class="cs-btn btn-single-item align-items-center rounded collapsed px-4"  aria-expanded="false">
                            <a href="#"> Summary </a>
                           </button>
-                          
+
                         </li>
-     
+
                       </ul>
 
 
@@ -231,33 +232,8 @@
               <!-- Content Start Here -->
                  @yield('content')
               <!-- Content Ends Here -->
-
-              
-               <!-- Modal -->
-                                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered">
-                                                  <div class="modal-content">
-                                                    <div class="modal-header">
-                                                      <h6 class="modal-title" id="exampleModalLabel">Add Comment:</h6>
-                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                      
-                                                      <form>
-                                                        <textarea class="form-control" rows="5"></textarea>
-                                                      </form>
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                      
-                                                      <button type="button" class="btn btn-primary">Save</button>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-              
             </div>
-            
+
         </div>
 
       </div>
@@ -279,8 +255,10 @@
 
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
     <script src="{{ asset('assets/js/sidebar.js') }}"></script>
     <!-- <script src="{{ asset('assets/js/all.min.js') }}"></script> -->
@@ -290,25 +268,29 @@
              $(this).addClass("active").siblings().removeClass("active");
            });
    </script>
+
+   
    <script>
     $(function() {
         // this will get the full URL at the address bar
         var url = window.location.href;
          let activeLink = $('.active').parent().parent();
-         activeLink.addClass('show') 
+         activeLink.addClass('show')
         // passes on every "a" tag
         $(".sidebar-nav li ul li a").each(function() {
             // checks if its the same on the address bar show
              if (url == (this.href)) {
-                
-                 
-               
+
+
+
             }
         });
-    });  
+    });
 
-          
+
 </script>
+
+@yield('js')
 
 
 

@@ -18,7 +18,7 @@ class PaymentForOurService extends Component
     }
 
     public function submitPaymentDetails(){
-    
+
     	$this->currentStep ++;
     }
 
@@ -29,8 +29,8 @@ class PaymentForOurService extends Component
         []);
     	$this->progressUpdate();
     	$this->emit('IncreamentProgress');
-    	
-    	return redirect()->to('/wages');	
+
+    	return redirect()->to('/wages');
     }
 
     public function back(){

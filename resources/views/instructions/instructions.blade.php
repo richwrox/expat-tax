@@ -9,7 +9,7 @@
 <div class="row mt-4 content-port">   
      
      <div class="col-md-11 ml-5 mt-5">
-       <p class="light-grey">Welcome {{ session()->get('name') }}</p>
+       <p class="light-grey">Welcome message Richard</p>
      </div>
    
 	

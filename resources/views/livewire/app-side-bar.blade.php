@@ -1,14 +1,22 @@
 <div>
     <header class="px-4">
-               
+
                <div class="row mb-4">
                  <div class="col tax-year-port-wrapper">
                    <select class="">
                       <optgroup>
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
+                          @if(session()->has('instructions') && is_array(session('instructions')['selectedYear']))
+                            @foreach (session('instructions')['selectedYear'] as $selectedYear)
+                                <option @if(session()->has('instructions') &&  session('instructions')['CurrentTaxFilingYear']==$selectedYear) selected @endif>{{ $selectedYear }}</option>
+                            @endforeach
+                            @elseif(session()->has('instructions'))
+                            <option>{{session('instructions')['selectedYear']}}</option>
+                            @else
+                            <option>Year</option>
+                            @endif
+                        {{-- <option @if(session()->has('instructions') &&  session('instructions')['CurrentTaxFilingYear']=='2019') selected @endif>2019</option>
+                        <option @if(session()->has('instructions') &&  session('instructions')['CurrentTaxFilingYear']=='2020') selected @endif>2020</option>
+                        <option @if(session()->has('instructions') &&  session('instructions')['CurrentTaxFilingYear']=='2021') selected @endif>2021</option> --}}
                       </optgroup>
                   </select>
 
@@ -29,8 +37,8 @@
               </header>
 
 
-              
-                
+
+
 
 
 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,22 +18,12 @@ Route::get('/', function () {
    return redirect()->to('/instructions');
 });
 
-Route::get('/login', 'LoginController@index');
-Route::get('/register-user', 'LoginController@showRegistrationForm');
-Route::get('/set-new-password', 'LoginController@showNewPasswordForm');
 
-
-Route::get('/instructions', 'HomeController@index');
+Route::get('/instructions', 'HomeController@index')->name('instructions');
 Route::get('/general-questions', 'GeneralQuestionsController@index');
 Route::get('/personal-information', 'GeneralInformationController@personalInfo');
 Route::get('/id-verification', 'GeneralInformationController@idVerification');
 Route::get('/payment-for-our-service', 'GeneralInformationController@paymentForOurService');
-Route::get('/wages', 'IncomeController@showWages');
-Route::get('/foreign-erned-income', 'IncomeController@showForeignErnedIncome');
-Route::get('/business-income', 'IncomeController@showBusinessIncome');
-
-
-
 
 // income sub menu routes
 Route::get('/wages', 'IncomeController@showWages');
