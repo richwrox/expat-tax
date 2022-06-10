@@ -56,9 +56,10 @@
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="site-logo" src="{{ asset('assets/images/expat-logo.png') }}">
       </a>
-
+      
+      <?php $x = Session::get('progress'); ?>
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto mr-4 top-nav-bar">
-        <a class="me-3 py-2  text-decoration-none" href="#">Questionaire</a>
+        <a class="me-3 py-2  text-decoration-none {{ ($x >= 1) ? 'top-nav-active':'2' }}" href="#">Questionaire</a>
         <a class="me-3 py-2  text-decoration-none" href="#">My Files</a>
         <a class="me-3 py-2  text-decoration-none" href="#">Contact Us</a>
         <a href="/login" class="py-2  text-decoration-none" href="#">Login</a>
