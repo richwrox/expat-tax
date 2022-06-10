@@ -17,4 +17,15 @@ class IncomeController extends Controller
     public function showBusinessIncome(){
     	return view('income.business_income');
     }
+
+    public function showRentalIncome()
+    {
+        return view('income.rental-income');
+    }
+
+
+    public function showPassiveIncome()
+    {
+        return view('income.passive-income');
+    }
 }

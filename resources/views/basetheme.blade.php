@@ -126,10 +126,20 @@
                           </button>
                           <div class="collapse" id="dashboard-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">Tax Filing</a></li>
-                              <li><a href="#" class="link-dark rounded">Estimate and Other Payments</a></li>
-                              <li><a href="#" class="link-dark rounded">Stimulus</a></li>
-                             
+                              <li class="{{ Request::is('tax-filing*') ? 'active' : '' }}">
+                                <a href="{{ route('tax-filing') }}" class="link-dark rounded">Tax Filing</a>
+                             </li>
+
+                                <li class="{{ Request::is('estimate-payments*') ? 'active' : '' }}">
+                                    <a href="{{ route('estimate-payments') }}" class="link-dark rounded">Estimate and Other Payments</a>
+                                </li>
+                                <li class="{{ Request::is('stimulus*') ? 'active' : '' }}">
+                                    <a href="{{ route('stimulus') }}" class="link-dark rounded">Stimulus</a>
+                                </li>
+
+                                <li class="{{ Request::is('advanced-child-tax-credit-payments-received*') ? 'active' : '' }}">
+                                    <a href="{{ route('advanced-child-tax') }}" class="link-dark rounded">Advanced child tax credit payments</a>
+                                </li>
                             </ul>
                           </div>
                         </li>
@@ -143,8 +153,12 @@
                               <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
                               <li class="{{ Request::is('foreign-erned-income*') ? 'active' : '' }}" ><a href="/foreign-erned-income" class="link-dark rounded">Foreign Erned Income</a></li>
                               <li class="{{ Request::is('business-income*') ? 'active' : '' }}" ><a href="/business-income" class="link-dark rounded">Business Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Investment and Passive Income</a></li>
-                              <li><a href="#" class="link-dark rounded">Rental Income & Sale of Property</a></li>
+                                <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
+                                <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
+                              </li>
+                              <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
+                                <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
+                              </li>
                             </ul>
                           </div>
                         </li>
@@ -157,10 +171,16 @@
                           </button>
                           <div class="collapse" id="foreign-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">FBR and 8938</a></li>
-                              <li><a href="#" class="link-dark rounded">5471 Foreign Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">3520 Foreign</a></li>
-                              
+                              <li class="{{ Request::is('fbr-8938*') ? 'active' : '' }}">
+                                <a href="{{route('FBR8938')}}" class="link-dark rounded" class="link-dark rounded">FBR and 8938</a>
+                              </li>
+                              <li class="{{ Request::is('5471-foreign-corporation*') ? 'active' : '' }}">
+                                <a href="{{route('five471')}}" class="link-dark rounded" class="link-dark rounded">5471 Foreign Corporation</a>
+                              </li>
+                              <li class="{{ Request::is('3520-foreign-trusts*') ? 'active' : '' }}">
+                                <a href="{{route('thirty520')}}"  class="link-dark rounded">3520 Foreign</a>
+                              </li>
+
                             </ul>
                           </div>
                         </li>
@@ -171,11 +191,21 @@
                           </button>
                           <div class="collapse" id="corporate-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">C-Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">S-Corporation</a></li>
-                              <li><a href="#" class="link-dark rounded">Partnership</a></li>
-                              <li><a href="#" class="link-dark rounded">Forign Corporation 112DF</a></li>
-                              <li><a href="#" class="link-dark rounded">Not Profit</a></li>
+                                <li class="{{ Request::is('c-corporations*') ? 'active' : '' }}">
+                                    <a href="{{route('c-corporations')}}" class="link-dark rounded">C-Corporation</a>
+                                </li>
+                                <li class="{{ Request::is('s-corporations*') ? 'active' : '' }}">
+                                    <a href="{{route('s-corporations')}}" class="link-dark rounded">S-Corporation</a>
+                                </li>
+                                <li class="{{ Request::is('partnership*') ? 'active' : '' }}">
+                                    <a href="{{route('partnership')}}" class="link-dark rounded">Partnerships</a>
+                                </li>
+                                <li class="{{ Request::is('foreign-corporation-112DF*') ? 'active' : '' }}">
+                                    <a href="{{route('foreign-corporation-112DF')}}" class="link-dark rounded">Foreign Corporation 112DF</a>
+                                </li>
+                                <li class="{{ Request::is('not-profit*') ? 'active' : '' }}">
+                                    <a href="{{route('not-profit')}}" class="link-dark rounded">Not Profit</a>
+                                </li>
                             </ul>
                           </div>
                         </li>
