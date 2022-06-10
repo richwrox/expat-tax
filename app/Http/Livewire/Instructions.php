@@ -10,9 +10,14 @@ class Instructions extends Component
 	public $selectedYear;
 	public $requestType;
     public $setTaxYear;
+<<<<<<< HEAD
     public $multipleSelectedYear = [];
     public $CurrentTaxFilingYear;
     public $completedYears;
+=======
+    public $filingMode;
+	
+>>>>>>> master
 
 
 	protected $listeners = ['selectYear','setTaxYear', 'multipleSelectedYear'];
@@ -24,9 +29,10 @@ class Instructions extends Component
         return view('livewire.instructions',['years'=>$years]);
     }
 
-    public function selectYear($year)
+    public function selectYear($data)
     {
-    	$this->requestType = $year;
+    	$this->requestType = $data;
+        \Session::put('filingMode',$data);
     }
 
     public function multipleSelectedYear($year)

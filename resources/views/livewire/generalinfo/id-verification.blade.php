@@ -38,7 +38,9 @@
                                                     <div class="col-md-4 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
-                                                                <label for="">Select ID Type</label><br/>
+                                                                <label for="">Select ID Type
+                                                                    @error('taxPayerIdType') <span class="error text-danger">*</span> @enderror
+                                                                </label><br/>
                                                                 <select wire:model="taxPayerIdType" class="form-control mt-2 light-grey">
                                                                 	<option value="0">--Select an option--</option>
                                                                 	<option value="1">US Driver's license</option>
@@ -60,7 +62,9 @@
                                                     <div class="col-md-4 col-sm-8  ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
-                                                                <label for="">License Number</label><br/>
+                                                                <label for="">License Number
+                                                                    @error('LicenseNumber') <span class="error text-danger">*</span> @enderror
+                                                                </label><br/>
                                                                 <input wire:model="LicenseNumber" type="text" class="form-control col-md-4" >
 
                                                             </div>
@@ -74,7 +78,9 @@
                                                     <div class="col-md-4 col-sm-8  ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
-                                                                <label for="">ID Number</label><br/>
+                                                                <label for="">ID Number
+                                                                    @error('IDNumber') <span class="error text-danger">*</span> @enderror
+                                                                </label><br/>
                                                                 <input wire:model="IDNumber" type="text" placeholder="State Issued Number" class="form-control col-md-4" >
 
                                                             </div>
@@ -85,19 +91,47 @@
 
                                         @endswitch
 
+
+                                        @if($taxPayerIdType == 1 || $taxPayerIdType == 2)
+
                                         <div class="row mt-3">
                                                     <div class="col-md-3 col-sm-8 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issuing State </label><br/>
+<<<<<<< HEAD
                                                                 <select wire:model="IDIssueState" class="form-control mt-2 light-grey">
                                                                 	<option value="3">NY</option>
+=======
+                                                                <select wire:model="IssuingState" class="form-control mt-2 light-grey">
+                                                                    <option>-----</option>
+                                                                    @foreach($states as $state)
+                                                                    <option value="{{ $state->abbreviation }}">{{ $state->name }}</option>
+                                                                    @endforeach
+>>>>>>> master
                                                                 </select>
 
                                                             </div>
                                                         </div>
                                                     </div>
                                         </div>
+
+
+                                        @if($IssuingState == 'NY')
+                                        <div class="row mt-3">
+                                                    <div class="col-md-5 col-sm-8 ml-5">
+                                                        <div class="form-group">
+                                                            <div class="form-group light-grey">
+                                                                <label for="">NY Document Number  8 /10 digit number either on bottom or back of card</label><br/>
+                                                                <input type="text" class="form-control col-md-4" >
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                        @endif
+
+                                        
 
                                         <div class="row mt-3">
                                                     <div class="col-md-3 col-sm-8 ml-5">
@@ -122,10 +156,23 @@
                                                         </div>
                                                     </div>
                                         </div>
+                                        
+                                        @endif
+
+                                        
 
 
                                         <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                 <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class="offset-md-5">
                                                         <div class="rows mr-auro">
 
@@ -212,14 +259,42 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issuing State </label><br/>
+<<<<<<< HEAD
                                                                 <select class="form-control mt-2 light-grey" wire:model="SpouseIssuingState">
                                                                 	<option value="3">NY</option>
+=======
+                                                                <select wire:model="SpouseIssuingState" class="form-control mt-2 light-grey">
+                                                                    <option>-----</option>
+                                                                    @foreach($states as $state)
+                                                                    <option value="{{ $state->abbreviation }}">{{ $state->name }}</option>
+                                                                    @endforeach
+>>>>>>> master
                                                                 </select>
 
                                                             </div>
                                                         </div>
                                                     </div>
                                         </div>
+
+                                        @if($SpouseIssuingState == 'NY')
+                                        <div class="row mt-3">
+                                                    <div class="col-md-5 col-sm-8 ml-5">
+                                                        <div class="form-group">
+                                                            <div class="form-group light-grey">
+                                                                <label for="">
+                                                                NY Document Number  8 /10 digit number either on bottom or back of card</label><br/>
+                                                                <input type="text" class="form-control col-md-4" >
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                        @endif
+
+
+
+
+
 
                                         <div class="row mt-3">
                                                     <div class="col-md-3 col-sm-8 ml-5">
@@ -249,7 +324,17 @@
 
                                           <div class="row">
 
+<<<<<<< HEAD
                                                     <div class="">
+=======
+                                            <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+                                                    <div class="offset-md-2">
+>>>>>>> master
                                                         <div class="rows mr-auro">
 
 	                                                        <div class="d-flex ">

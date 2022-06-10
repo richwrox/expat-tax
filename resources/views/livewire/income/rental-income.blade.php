@@ -18,7 +18,11 @@
     @if ($currentStep == 1)
         <div class="row mt-4">
             <div class="form-group">
+<<<<<<< HEAD
             <label class="mb-2" for=""><strong>Do you have any rental properties?</strong>
+=======
+            <label class="mb-2 light-grey" for=""><strong>Do you have any rental properties?</strong>
+>>>>>>> master
                 @error('hasRentalProperty') <span class="error text-danger">*</span>
                 @enderror
             </label><br>

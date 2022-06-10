@@ -74,8 +74,47 @@
 
     </div>
 
+<<<<<<< HEAD
     @endif
 
+=======
+                                                                    </div>
+                                                                    <p> @error('selectedYear') <span class="error text-danger">{{ $message }}</span> @enderror</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12 ml-5">
+                                                                <div class="form-group">
+                                                                    <p class="light-grey">
+                                                                    @if($selectedYear != null)
+                                                                    Great, lets start with  {{$selectedYear}} 
+                                                                    @endif
+                                                                    </p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+    
+    
+                                                        <div class="row">
+                                                            <div class="col-md-6 offset-md-6">
+                                                                <div class="row mr-auro">
+                                                                    <div class="mr-5 button_font_small">
+                                                                        <button wire:click="post" type="button" class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white mb-5 mt-5 button_font_small">General Questions
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                    </form>
+                                                    
+                                                
+                                                </div>
+>>>>>>> master
 
     @if($requestType == 'multiple')
     <div id="singleForm" class="class_hidden">

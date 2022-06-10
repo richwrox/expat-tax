@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Income;
 
 use Livewire\Component;
+<<<<<<< HEAD
 use App\Core\GlobalService;
 
 
@@ -36,6 +37,17 @@ class ForeignIncome extends Component
     public $Rent,$HouseholdRepairs,$Utilities,$RealPropertyInsurance,$OccupancyTax,$NonRefundableSecurityDeposit,
     $FurnitureRental,$ResidentialParking;
 
+=======
+
+class ForeignIncome extends Component
+{
+	public $currentStep = 1;
+	public $SeparateForeignResidence,$SecondCityAndCountry,$CountryofResidence,$DateMoved,$HadFamilyMember,$SubmittedStatement,$RequiredToPayTaxToResidentCountry,$PresentInUS,$DateofArrival,$NumberofBusinessDaysInUS,$IncomeEarnedUS,$Contract,$TypeofVisa,$DidYouMaintainHome,$VisaLimitation;
+
+	public $SpouseNameofEmployer,$SpouseAddressofEmployer,$SpouseSeparateForeignAddress,$CountryofResidenceDuringYear,$SpouseResidentCountry,$DateMovedToCountryOfResidence,$DateMovedFromResidenceCountry,$DidFamilyLiveWithYou,$LivingQuarters,$NameOfRelative,$LivedInStartDate,$SubmittedAuthorizedStatement,$WereYouprenstInUS,$RequiredToPayIncomeTax,$DateArrivedInUS,$DateLeftInUS,$NumberofDaysInUS,$TNC,$InWhatWay,$VisaLimit,$OccupantsAddress,$SpouseDidYouMaintainHome;
+
+    public $Rent,$HouseholdRepairs,$Utilities,$RealProperty,$OccupancyTaxes,$Nonrefundable,$FurnitureRental,$ResidentialParking;
+>>>>>>> master
 
     public function render()
     {
@@ -43,6 +55,7 @@ class ForeignIncome extends Component
     }
 
 
+<<<<<<< HEAD
     public function addInput($i)
     {
         $i = $i + 1;
@@ -145,4 +158,24 @@ public function submitForeignHousing(){
     return redirect()->route('business-income');
  }
 
+=======
+    public function submitTaxperDetails(){
+    	$this->currentStep ++;
+    }
+
+    public function submitSpouseDetails()
+    {
+        $this->currentStep ++;
+    }
+
+    public function submitForeignHousingDetails()
+    {
+        $this->currentStep ++;
+    }
+
+    public function back()
+    {
+
+    }
+>>>>>>> master
 }

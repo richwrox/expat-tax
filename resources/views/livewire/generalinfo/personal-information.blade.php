@@ -7,18 +7,22 @@
                                                    <li class="breadcrumb-item mr-3 {{ $currentStep == 1 ? 'section-active' : '' }}">
                                                     <a class="light-grey" href="#"> Personal Info</a></li>
 
+                                                    @if($AreYouUSCitizen === 'no')
                                                    <li class="breadcrumb-item mr-3 {{ $currentStep == 2 ? 'section-active' : '' }} ">
-                                                    <a class="light-grey" href="#"> ITIN Info</a>
+                                                    <a class="light-grey" href="#">Taxpayer ITIN Info</a>
                                                    </li>
+                                                    @endif
 
 
                                                    <li class="breadcrumb-item mr-3 {{ $currentStep == 3 ? 'section-active' : '' }}"><a class="light-grey" href="#">Spouse Info</a>
                                                    </li>
 
+                                                   @if($isSpouseUSCitizen === 'no')
                                                    <li class="breadcrumb-item mr-3 {{ $currentStep == 4 ? 'section-active' : '' }}"><a class="light-grey" href="#">Spouse ITIN Information</a>
                                                    </li>
+                                                   @endif
 
-                                                   <li class="breadcrumb-item mr-3 {{ $currentStep == 5 ? 'section-active' : '' }}"><a class="light-grey" href="#">Dependent</a>
+                                                   <li class="breadcrumb-item mr-3 {{ $currentStep == 5 ? 'section-active' : '' }}"><a class="light-grey" href="#">Dependents</a>
                                                    </li>
                                                    <li class="breadcrumb-item mr-3 {{ $currentStep == 6 ? 'section-active' : '' }}"><a class="light-grey" href="#">Contact Info</a>
                                                    </li>
@@ -201,6 +205,15 @@
 
                                                 <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                    <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class="offset-md-7">
                                                         <div class="rows mr-auro">
 
@@ -464,6 +477,15 @@
 
                                                     <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                    <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class="offset-md-5">
                                                         <div class="rows mr-auro">
 
@@ -625,6 +647,15 @@
 
                                                 <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                    <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class=" offset-md-5">
                                                         <div class="rows mr-auro">
 
@@ -649,7 +680,7 @@
 
                                                                   <div class="mr-5">
                                                                         <button wire:click="submitSpuseInfo(5)" class="btn btn-outline-secondary  btn-site-primary color-text-white my-5 mx-5 ml-5">
-                                                                            <span class="pl-3 button_font_small">Dependent <i class="fas fa-arrow-right button_font_small"></i></span>
+                                                                            <span class="pl-3 button_font_small">Dependents <i class="fas fa-arrow-right button_font_small"></i></span>
                                                                         </button>
                                                                     </div>
 
@@ -910,22 +941,33 @@
                                                             </div>
 
 
+<<<<<<< HEAD
                                                             <div class="row">
 
+=======
+                                          <div class="row">
+
+                                                                <div class="comment-area">
+                                                                  <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                  <i class="fas fa-message"></i> Add Comment
+                                                                  </div>
+                                                                </div>
+                        
+>>>>>>> master
                                                     <div class=" offset-md-4">
                                                         <div class="rows mr-auro">
 
                                                             <div class="d-flex ">
 
                                                                     <div class="">
-                                                                        <button wire:click="$emit('back', 1 )" class="btn mr-3 btn-site-primary color-text-white my-5 mx-5 ml-5"><i class="fas fa-arrow-left button_font_small"></i>
+                                                                        <button wire:click="$emit('back', 1 )" class="btn mr-3 btn-site-primary btn-outline-secondary color-text-white my-5 mx-5 ml-5"><i class="fas fa-arrow-left button_font_small"></i>
                                                                             <span class="pl-1 button_font_small">Spouse Info</span>
                                                                         </button>
                                                                     </div>
 
                                                                 <div class="mr-5">
-                                                                    <button wire:click="moveToDependent" class="btn mr-3 btn-site-primary color-text-white my-5 mx-5 ml-5">
-                                                                        <span class="pl-3 button_font_small">Dependent<i class="fas fa-arrow-right button_font_small"></i></span>
+                                                                    <button wire:click="moveToDependent" class="btn mr-3 btn-outline-secondary btn-site-primary color-text-white my-5 mx-5 ml-5">
+                                                                        <span class="pl-3 button_font_small">Dependents<i class="fas fa-arrow-right button_font_small"></i></span>
                                                                     </button>
                                                                 </div>
 
@@ -1034,14 +1076,29 @@
                                                     <div class="col-md-8 ml-5">
                                                         <div class="form-group light-grey">
                                                             <label for="">Relationship to taxpayer</label><br/>
+<<<<<<< HEAD
                                                                 <select class="form-control" aria-label="Default select example" wire:model='dependentTaxpayerRelationship'>
                                                                     <option value="">-----</option>
+=======
+                                                                <select wire:model="RelationshipToTaxpayer" class="form-control mb-4" aria-label="Default select example">
+                                                                    <option value="RelationshipToTaxpayer">-----</option>
+>>>>>>> master
                                                                     <option value="son">Son</option>
                                                                     <option value="daughter">Daughter</option>
                                                                     <option value="other">Other</option>
                                                                 </select>
                                                         </div>
+
+                                                        @if($RelationshipToTaxpayer === 'other')
+
+                                                    <input type="text" class="form-control" placeholder="Explain" name="">
+
+                                                    @endif
+
+
                                                     </div>
+
+
                                         </div>
 
 
@@ -1049,7 +1106,7 @@
                                         <div class="col-md-8 ml-5 mt-4">
                                           <div class="form-group">
                                               <div class="form-group light-grey">
-                                                <label for="">Was Child Naturalised?</label>
+                                                <label for="">Was Child Naturalized?</label>
 
                                                 <div class="mt-1">
                                                     <input type="radio" wire:model="IsChildNaturalised"  class="btn-check form-check-input " name="options-outlined" id="IsChildNaturalisedYes" value='yes' on>
@@ -1065,8 +1122,33 @@
                                        </div>
 
 
+                                       @if($IsChildNaturalised === 'yes')
+                                       <div class="col-md-8 ml-5 mt-4">                                              
+                                          <div class="form-group row">                                              
+                                              <div class="form-group light-grey">
+                                                <label for="">Date Naturalized?</label>
+
+                                                <div class="mt-1 col-md-3">
+                                                    <input type="date" class="form-control" />
+                                                </div>
+                                                                                                                                                                                             
+                                              </div>                                                 
+                                          </div>                                                                                                             
+                                       </div>
+                                       @endif
+
+
                                        <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                 <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class=" offset-md-4">
                                                         <div class="rows mr-auro">
 
@@ -1144,8 +1226,18 @@
                                                                 <label for="">Country
                                                                     @error('Country') <span class="error text-danger">*</span> @enderror
                                                                 </label><br/>
+<<<<<<< HEAD
                                                                 <input wire:model="Country" type="text" class="form-control col-md-4" >
 
+=======
+                                                               
+                                                                <select class="form-control"  wire:model="Country">
+                                                                  @foreach($countries as $country)
+                                                                  <option value="{{ $country->countryname }}">{{ $country->countryname }}</option>
+                                                                @endforeach  
+                                                                </select>
+                                                                
+>>>>>>> master
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1169,7 +1261,7 @@
                                                     <div class="col-md-6 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
-                                                                <label for="">Phone Number
+                                                                <label for="">Account Number
                                                                     @error('TaxPayerPhone') <span class="error text-danger">*</span> @enderror
                                                                 </label><br/>
                                                                 <input wire:model="TaxPayerPhone" type="text" class="form-control col-md-4" >
@@ -1195,11 +1287,20 @@
 
                                         <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                 <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                                                 
+>>>>>>> master
                                                         <div class="rows mr-auro offset-md-4">
                                                             <div class="d-flex ">
                                                                     <div class="">
                                                                         <button wire:click="$emit('back', 3 )" class="btn btn-outline-secondary btn-site-primary color-text-white my-5 mx-5 ml-5"><i class="fas fa-arrow-left button_font_small"></i>
-                                                                            <span class="pl-1 button_font_small"> Dependent</span>
+                                                                            <span class="pl-1 button_font_small"> Dependents</span>
                                                                         </button>
                                                                     </div>
 
@@ -1240,7 +1341,11 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Account type (Cheking/Savings)</label><br/>
+<<<<<<< HEAD
                                                                 <select class="form-control" wire:model="accountType">
+=======
+                                                                <select class="form-control light-grey">
+>>>>>>> master
                                                                     <option>Checking Account</option>
                                                                     <option>Savings Account </option>
                                                                 </select>
@@ -1255,9 +1360,15 @@
                                                     <div class="col-md-6 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
+<<<<<<< HEAD
                                                                 <label for="">Phone Number</label><br/>
                                                                 <input type="text" class="form-control col-md-4" wire:model="accountPhone" >
 
+=======
+                                                                <label for="">Account Number</label><br/>
+                                                                <input type="text" class="form-control col-md-4" >
+                                                                
+>>>>>>> master
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1278,6 +1389,15 @@
 
                                         <div class="row">
 
+<<<<<<< HEAD
+=======
+                                                  <div class="comment-area">
+                                                              <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                                                <i class="fas fa-message"></i> Add Comment
+                                                              </div>
+                                                  </div>
+                        
+>>>>>>> master
                                                     <div class="offset-md-5 ">
                                                         <div class="rows mr-auro">
 
