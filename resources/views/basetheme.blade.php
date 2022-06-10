@@ -56,10 +56,9 @@
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="site-logo" src="{{ asset('assets/images/expat-logo.png') }}">
       </a>
-      
-      <?php $x = Session::get('progress'); ?>
+
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto mr-4 top-nav-bar">
-        <a class="me-3 py-2  text-decoration-none {{ ($x >= 1) ? 'top-nav-active':'2' }}" href="#">Questionaire</a>
+        <a class="me-3 py-2  text-decoration-none" href="#">Questionaire</a>
         <a class="me-3 py-2  text-decoration-none" href="#">My Files</a>
         <a class="me-3 py-2  text-decoration-none" href="#">Contact Us</a>
         <a href="/login" class="py-2  text-decoration-none" href="#">Login</a>
@@ -119,7 +118,6 @@
                             </ul>
                           </div>
                         </li>
-<<<<<<< HEAD
 
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
@@ -167,54 +165,6 @@
                             </ul>
                           </div>
                         </li>
-=======
-
-
-                         <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                            Taxes & Deductions
-                          </button>
-                          <div class="collapse" id="dashboard-collapse" style="">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li class="{{ Request::is('tax-filing*') ? 'active' : '' }}">
-                                <a href="{{ route('tax-filing') }}" class="link-dark rounded">Tax Filing</a>
-                             </li>
-
-                                <li class="{{ Request::is('estimate-payments*') ? 'active' : '' }}">
-                                    <a href="{{ route('estimate-payments') }}" class="link-dark rounded">Estimate and Other Payments</a>
-                                </li>
-                                <li class="{{ Request::is('stimulus*') ? 'active' : '' }}">
-                                    <a href="{{ route('stimulus') }}" class="link-dark rounded">Stimulus</a>
-                                </li>
-
-                                <li class="{{ Request::is('advanced-child-tax-credit-payments-received*') ? 'active' : '' }}">
-                                    <a href="{{ route('advanced-child-tax') }}" class="link-dark rounded">Advanced child tax credit payments</a>
-                                </li>
-                            </ul>
-                          </div>
-                        </li>
-                        
-                        <li class="mb-4">
-                          <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                            Income
-                          </button>
-                          <div class="collapse" id="orders-collapse" style="">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li class="{{ Request::is('wages*') ? 'active' : '' }}"><a href="/wages" class="link-dark rounded">Wages</a></li>
-                              <li class="{{ Request::is('foreign-erned-income*') ? 'active' : '' }}" ><a href="/foreign-erned-income" class="link-dark rounded">Foreign Erned Income</a></li>
-                              <li class="{{ Request::is('business-income*') ? 'active' : '' }}" ><a href="/business-income" class="link-dark rounded">Business Income</a></li>
-                                <li  class="{{ Request::is('passive-income*') ? 'active' : '' }}">
-                                <a href="{{route('passive-income')}}" class="link-dark rounded">Investment and Passive Income</a>
-                              </li>
-                              <li class="{{ Request::is('rental-income*') ? 'active' : '' }}">
-                                <a href="{{route('rental-income')}}" class="link-dark rounded">Rental Income & Sale of Property</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </li>
-
-                       
->>>>>>> master
 
                         <li class="mb-4">
                           <button class="cs-btn btn-toggle align-items-center rounded collapsed px-4" data-bs-toggle="collapse" data-bs-target="#foreign-collapse" aria-expanded="false">

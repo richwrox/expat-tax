@@ -45,18 +45,8 @@ class PersonalInformation extends Component
 
     public $StreetAddress,$City,$Country,$ZIPCode,$TaxPayerPhone,$TaxpayerEmail;
 
-<<<<<<< HEAD
-    public $dependentFirstName, $dependentMiddleName,$dependentLastName,$dependentSSN,$dependentSSNDate,$dependentdod,$dependentTaxpayerRelationship,$IsChildNaturalised;
-    public $accountType,$accountPhone,$routingNo;
-=======
     public $RelationshipToTaxpayer;
 
-     public function mount()
-    {
-        $this->countries = Country::get();
-
-    }
->>>>>>> master
 
 	protected $listeners = ['IsUSACitizen','spouseCitizenship','back','backTo'];
     public function render()
@@ -66,6 +56,7 @@ class PersonalInformation extends Component
 
     public function mount()
     {
+        // $this->countries = Country::get();
         if(session()->has('personal-info')){
             $this->firstName = session('personal-info')['firstName'];
             $this->lastName = session('personal-info')['lastName'];

@@ -10,14 +10,11 @@ class Instructions extends Component
 	public $selectedYear;
 	public $requestType;
     public $setTaxYear;
-<<<<<<< HEAD
     public $multipleSelectedYear = [];
     public $CurrentTaxFilingYear;
     public $completedYears;
-=======
     public $filingMode;
 	
->>>>>>> master
 
 
 	protected $listeners = ['selectYear','setTaxYear', 'multipleSelectedYear'];
