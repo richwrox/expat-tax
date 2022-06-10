@@ -9,7 +9,7 @@ font-size: .9rem;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 html,
 body {
- 
+
 }
 
 label{
@@ -89,6 +89,17 @@ label{
 
 div label input {margin-right: 100px;}
 
+.multi-year-options
+{
+  display: flex;
+  column-gap: 10px;
+}
+
+.multi-year-btn-container
+{
+  position: relative;
+}
+
 .multi-year-btn{
   margin: 2px;
   border-radius: 5px;
@@ -143,6 +154,21 @@ div label input {margin-right: 100px;}
 {
   background-color: #8764AA;
   color: #fff;
+}
+
+.completed-year-check-mark
+{
+  position: relative;
+  top: -10px;
+  padding: 5px;
+  background: green;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 8px;
+  z-index: 99999;
+  color: white;
+  right: 14px;
+  width: 20px;
 }
 /* end of multibutton select */
 
@@ -232,8 +258,8 @@ div label input {margin-right: 100px;}
 .inner-wrapper{
   margin-top: -10px;
   /*background-image: linear-gradient(to right, red , yellow);*/
-  background-image: linear-gradient(to right, #8764AA,#4C78A4,#5fb774); 
-  
+  background-image: linear-gradient(to right, #8764AA,#4C78A4,#5fb774);
+
 }
 
 .bread-crumbs{
@@ -246,7 +272,7 @@ div label input {margin-right: 100px;}
   background-color: #ffffff;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  
+
   display:flex;
   flex-direction:column;
 }
@@ -257,13 +283,13 @@ div label input {margin-right: 100px;}
   padding-top:2.5em;
   padding-left: 0px;
   padding-right: 0px;
-  
-  
+
+
 }
 
 .sidebar{
   height: 100vh;
-  flex:1; 
+  flex:1;
 }
 
 
@@ -272,7 +298,7 @@ div label input {margin-right: 100px;}
 #progress-bar-container {
   width: 100%;
   height: 17px;
-  
+
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -299,7 +325,7 @@ div label input {margin-right: 100px;}
 #4C78A4 - Blue
 #2B9392 - Green*/
   /* Chrome10-25,Safari5.1-6 */
-  
+
 }
 
 .pr-bg-start{
@@ -320,7 +346,7 @@ div label input {margin-right: 100px;}
   background-color: #f9f7fb;
   position: absolute;
   margin-top: 1;
-  
+
 }
 
 .tax-year-port-wrapper select{
@@ -335,7 +361,7 @@ div label input {margin-right: 100px;}
 .side-bar-wrapper{
   bottom: 0;
   transition: left 0.4s ease;
-  
+
 }
 
 
@@ -365,7 +391,7 @@ div label input {margin-right: 100px;}
   margin-top: 7rem; }
 
 .button_primary {
-  background-color: #0074c8; 
+  background-color: #0074c8;
 }
 
 
@@ -400,11 +426,11 @@ div label input {margin-right: 100px;}
 }
 
 .btn-outline-info, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show, .btn-outline-info:active {
-  
+
 }
 
 .breadcrumb li a{
-  
+
 }
 
 #file_names,#file_name2, #file_name3 , #file_name4, #file_name5, #file_name6, #file_name7, #file_name8, #file_name9{
@@ -451,6 +477,48 @@ div label input {margin-right: 100px;}
   clear: both;
 }
 
+
+/* button checkbox */
+
+.button-checkbox{
+    margin: 4px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #6c757d;
+    border-color: #6c757d;
+    overflow: hidden;
+    float: left;
+  }
+
+  .button-checkbox label {
+    float: left; line-height: 3.0em;
+    width: 8.0em; height: 3.0em;
+  }
+
+  .button-checkbox label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+  }
+
+  .button-checkbox label input {
+    position: absolute;
+    display: none;
+    color: #6c757d !important;
+  }
+  /* selects all of the text within the input element and changes the color of the text */
+  .button-checkbox label input + span{color: #6c757d;}
+
+
+  /* This will declare how a selected input will look giving generic properties */
+  .button-checkbox input:checked + span {
+      color: #fff;
+      text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+      background-color: #8764AA;
+  }
+
+
+
 /*.btn-site-primary.disabled, .btn-site-primary:disabled {
   color: #6c757d;
   background-color: transparent;
@@ -490,14 +558,14 @@ div label input {margin-right: 100px;}
 
 
 
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
 
  }
 
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
-    
+
  }
 
 

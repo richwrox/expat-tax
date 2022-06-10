@@ -268,6 +268,8 @@
              $(this).addClass("active").siblings().removeClass("active");
            });
    </script>
+
+   
    <script>
     $(function() {
         // this will get the full URL at the address bar

@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/instructions', 'HomeController@index');
+Route::get('/instructions', 'HomeController@index')->name('instructions');
 Route::get('/general-questions', 'GeneralQuestionsController@index');
 Route::get('/personal-information', 'GeneralInformationController@personalInfo');
 Route::get('/id-verification', 'GeneralInformationController@idVerification');
