@@ -14,11 +14,8 @@ class NotProfit extends Component
 
 	public $currentStep = 1;
 
-<<<<<<< HEAD
     // form variables
-=======
     // form variables 
->>>>>>> master
     public $isFirstTimeFiling990;
     public $name;
     public $ein;
@@ -41,7 +38,6 @@ class NotProfit extends Component
     {
         // validation and form save/submission
 
-<<<<<<< HEAD
         // session('instructions')['completedYears']= session('instructions')['CurrentTaxFilingYear'];
         // dd(session('instructions')['CurrentTaxFilingYear']);
 
@@ -72,10 +68,8 @@ class NotProfit extends Component
 
         return redirect()->route('instructions');
 
-=======
 
         // goto partnership page
->>>>>>> master
         $this->progressUpdate();
         // return redirect()->route('summary');
 
