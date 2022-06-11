@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Generalinfo;
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Country;
+
 class PersonalInformation extends Component
 {
     use WithFileUploads;
@@ -17,7 +17,6 @@ class PersonalInformation extends Component
     public $lastName,$middleName,$TaxpayerDOB,$occupation,$TaxpayerCitizenShipStatus,$SSN,$SSNFile;
     public $isSpouseUSCitizen;
     public $dependentList;
-    public $dependentFirstName,$dependentSSN,$dependentdod,$dependentMiddleName,$dependentLastName;
 
     public $DoYouHaveITIN,$WantToApplyForITINTaxpayer;
     public $TaxpayerForiegnPassportUpload;
@@ -45,8 +44,8 @@ class PersonalInformation extends Component
 
     public $StreetAddress,$City,$Country,$ZIPCode,$TaxPayerPhone,$TaxpayerEmail;
 
-    public $RelationshipToTaxpayer;
-
+    public $dependentFirstName, $dependentMiddleName,$dependentLastName,$dependentSSN,$dependentSSNDate,$dependentdod,$dependentTaxpayerRelationship,$IsChildNaturalised;
+    public $accountType,$accountPhone,$routingNo;
 
 	protected $listeners = ['IsUSACitizen','spouseCitizenship','back','backTo'];
     public function render()
@@ -56,7 +55,6 @@ class PersonalInformation extends Component
 
     public function mount()
     {
-        // $this->countries = Country::get();
         if(session()->has('personal-info')){
             $this->firstName = session('personal-info')['firstName'];
             $this->lastName = session('personal-info')['lastName'];

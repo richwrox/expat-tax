@@ -18,17 +18,13 @@ class GeneralInformation extends Component
     public $CorporateOrPartnerTax,$ReturningClient,$SupportingDocument,$NumberofFilesUploded,$UploadPreviosUSTax,$FiledExtention,$SpecifyExtendedDate,$ClaimedasDependent,$StreamLinedFile;
     public $AmendedReturns='';
     public $NonWillfulWording;
-    public $NumberofFormsToUpload =1;
+    public $NumberofFormsToUpload =0;
     public $FiledPreviousUSTax,$ImmigrationDate,$LivingInUS,$IPPIN,$ProvidePIN,$CantFindPIN;
-    public  $filingMode;
 
 
 
 	protected $listeners = ['SetPINStatus','ToggleAmendedReturns','back'];
-    public function mount()
-    {
-        $this->filingMode = \Session::get('filingMode');
-    }
+
     public function render()
     {
         return view('livewire.general-information');
@@ -55,18 +51,9 @@ class GeneralInformation extends Component
 
         );
 
-         $this->progressUpdate();
-         $this->emit('IncreamentProgress');
-
-         if($this->filingMode === 'single'){
-             
-             $this->currentStep =3;
-         }else{
-            $this->currentStep ++;
-         }
-
-        
-        
+        $this->currentStep ++;
+        $this->progressUpdate();
+        $this->emit('IncreamentProgress');
 
     }
 

@@ -11,10 +11,10 @@
 
                         <li class="breadcrumb-item mr-3 {{ $currentStep == 1 ? 'section-active' : '' }}">
                             <a class="light-grey" href="#">Filing Questions </a></li>
-                        @if($filingMode != 'single')
+
                         <li class="breadcrumb-item mr-3 {{ $currentStep == 2 ? 'section-active' : '' }} ">
                             <a class="light-grey" href="#">Streamlined procedure</a></li>
-                        @endif
+
                         <li class="breadcrumb-item mr-3 {{ $currentStep == 3 ? 'section-active' : '' }}"><a
                                 class="light-grey" href="#">General questions</a></li>
 
@@ -26,11 +26,10 @@
 
 
     </div>
-    {{-- Section 1 --}}
+    {{-- Section 2 --}}
     <div class="{{ $currentStep != 1 ? 'display-none' : '' }} " id="step-1">
         <div>
             <div class="row">
-
 
 
                 @switch($currentView)
@@ -153,14 +152,32 @@
                     </div>
 
 
+                    <div class="col-md-3 mt-4">
+                        <div class="form-group light-grey">
+                            <label class="mb-2" for="">Amount of forms uploaded</label><br />
+                            <select wire:model="NumberofFormsToUpload" class="form-control">
+                                <option value="0">----</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="row mt-3" id="">
                         <div class="col-md-12 ml-5">
                             <div class="form-group">
                                 <div class="form-group light-grey">
 
                                     @for($i=0; $i < $NumberofFormsToUpload; $i++) <div class="form-group mt-3">
-                                        <div class="file btn btn-outline-secondary cs-file-upload">
-                                            <i class="fa fa-upload mr-4"></i> Upload Supporting Documents
+                                        <div class="file btn btn-secondary cs-file-upload">
+                                            <i class="fa fa-upload mr-4"></i> File_Upload.pdf
                                             <input wire:model="SupportingDocument{{$i}}" type="file" name="file" />
                                         </div>
                                 </div>
@@ -171,36 +188,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div class="mt-4 d-flex">
-
-                    <label class="light-grey" for="DoyouHaveW-2FormsYes">Amount of forms uploaded
-                    </label>
-
-                    <div class="">
-                        <input style="width:50px;" type="number" wire:model="NumberofFormsToUpload" name="">
-                        <!--   <select  class="form-controls">
-                                                                     
-                                                                      <option value="1">1</option>
-                                                                      <option value="2">2</option>
-                                                                      <option value="3">3</option>
-                                                                      <option value="4">4</option>
-                                                                      <option value="5">5</option>
-                                                                      <option value="6">7</option>
-                                                                      <option value="8">8</option>
-                                                                      <option value="9">9</option>
-                                                                      <option value="10">10</option>
-                                                                    </select> -->
-
-                    </div>
-
-                </div>
-
-
-
-
-
 
 
                 @endif
@@ -349,46 +336,16 @@
 
 
                 <div class="row mt-5">
-
-                    <div class="comment-area">
-                        <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="fas fa-message"></i> Add Comment
-                        </div>
-                    </div>
-
                     <div class="col-md-6 offset-md-6">
                         <div class="row mr-auro">
-
-
-                            @if($filingMode === 'single')
-
-
-                            <div class="mr-5">
-                                <button wire:click="submitSectionOne"
-                                    class="btn btn-outline-secondary mr-3 btn-site-primary color-text-white my-5 mx-5 ml-5">
-                                    <span class="pl-3 button_font_small"> General Questions <i
-                                            class="fas fa-arrow-right button_font_small"></i></span>
-                                </button>
-                            </div>
-
-                            @else
-
                             <div class="mr-5 button_font_small">
                                 <button wire:click="submitSectionOne" type="button"
-                                    class="btn mr-3 btn-outline-secondary btn-site-primary color-text-white mb-5 mt-5 button_font_small">
+                                    class="btn mr-3 btn-site-primary color-text-white mb-5 mt-5 button_font_small">
                                     Streamlined procedure <i class="fas fa-arrow-right button_font_small"></i>
                                 </button>
                             </div>
-
-                            @endif
-
-
-
-
                         </div>
                     </div>
-
-
                 </div>
 
 
@@ -410,14 +367,6 @@
 
 
     </div>
-
-
-
-
-
-
-
-
 </div>
 {{-- End Section 1 --}}
 
@@ -426,19 +375,22 @@
 {{-- Section 2 --}}
 <div class="{{ $currentStep != 2 ? 'display-none' : '' }} " id="step-2">
 
+    <div class="row">
+        <div class="col-md-8 text-info">
+            <span>
+                <i class="fa fa-regular fa-circle-info "></i>
+
+                The Streamline Offshore Program as a means of allowing taxpayers to make up for their filing delinquency
+                and become compliant. This program was further developed over the next few years. It includes filing
+                three years back of delinquent tax returns and six years of Fbars. One must also sign a certification of
+                non-willful conduct. Entering into this program allows taxpayers to come clean without having to pay any
+                penalties for delinquency or late filing of past returns or Fbars. </span>
+        </div>
+    </div>
+
     <div class="row mb-3 mt-3">
         <div class="form-group col-md-6 light-grey">
             <label class="mb-2" for="">Are you filing streamlined?
-                <span class="cs-tooltip text-info"><i class="fa fa-regular fa-circle-info "></i>
-                    <span class="cs-tooltiptext ">
-                        The Streamline Offshore Program as a means of allowing taxpayers to make up for their filing
-                        delinquency and become compliant. This program was further developed over the next few years. It
-                        includes filing three years back of delinquent tax returns and six years of Fbars. One must also
-                        sign a certification of non-willful conduct. Entering into this program allows taxpayers to come
-                        clean without having to pay any penalties for delinquency or late filing of past returns or
-                        Fbars.
-                    </span>
-                </span>
                 @error('StreamLinedFile') <span class="error text-danger">*</span> @enderror
             </label><br />
 
@@ -470,13 +422,6 @@
     @endif
 
     <div class="row mt-5">
-
-        <div class="comment-area">
-            <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="fas fa-message"></i> Add Comment
-            </div>
-        </div>
-
         <div class="col-md-10 offset-md-2">
             <div class="row mr-auro">
                 <div class="mr-5 button_font_small">
@@ -597,12 +542,6 @@
 
     <div class="row">
 
-        <div class="comment-area">
-            <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="fas fa-message"></i> Add Comment
-            </div>
-        </div>
-
         <div class=" offset-md-4">
             <div class="rows mr-auro">
 
@@ -633,8 +572,5 @@
     </div>
 </div>
 {{-- End Section 3 --}}
-
-
-
 
 </div>

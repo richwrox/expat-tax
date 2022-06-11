@@ -4,33 +4,16 @@ namespace App\Http\Livewire\Generalinfo;
 
 use Livewire\Component;
 use App\Core\GlobalService;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Session;
 
-=======
-use App\Models\USState;
->>>>>>> master
 class IdVerification extends Component
 {
 	use GlobalService;
 
-<<<<<<< HEAD
 	public $taxPayerIdType,$LicenseNumber,$IDNumber,$IDIssueState,$IDExpirationDate,$IDIssueDate;
 	public $spouseIdType, $SpouseLicenseNumber, $spouseIDNo, $SpouseIssuingState, $SpouseIDExpirationDate, $SpouseSpouseIDExpirationDate;
-=======
-	public $taxPayerIdType;
-	public $spouseIdType,$LicenseNumber,$IDNumber;
-    public $states,$IssuingState,$SpouseIssuingState;
-
->>>>>>> master
 
 	public $currentStep = 1;
-
-    public function mount()
-    {
-        $this->states = USState::get();
-       
-    }
 
     public function render()
     {
