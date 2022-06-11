@@ -1,5 +1,5 @@
 <div>
-    
+
 
 
 										{{-- Step 1 --}}
@@ -7,7 +7,7 @@
 									      <div class="col-md-12 ">
 									         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 									            <ol class="breadcrumb cs-breadcrumbs">
-									               
+
 									               <li class="breadcrumb-item mr-3 {{ $currentStep == 1 ? 'section-active' : '' }}">
 									               	<a class="light-grey" href="#">Taxpayer ID Verification</a>
 									               </li>
@@ -15,7 +15,7 @@
 									                <li class="breadcrumb-item mr-3 {{ $currentStep == 2 ? 'section-active' : '' }}">
 									               	<a class="light-grey" href="#">Spouse ID Verification</a>
 									               </li>
-									               
+
 									            </ol>
 									          </nav>
 									      </div>
@@ -24,17 +24,17 @@
 									    <div class="row">
 									    	<div class="col-md-6 text-info">
 									    	<span>
-									    	<i class="fa fa-regular fa-circle-info "></i> 
+									    	<i class="fa fa-regular fa-circle-info "></i>
 
 									    	Providing identification info helps the IRS verify your identity which can prevent unnecessary delays in tax return processing.</span>
 									    	</div>
 									    </div>
-     
+
 
      									<div class="{{ $currentStep != 1 ? 'display-none' : '' }} " id="step-1">
-     
+
 										<div class="row mt-4">
-      
+
                                                     <div class="col-md-4 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
@@ -45,14 +45,14 @@
                                                                 	<option value="0">--Select an option--</option>
                                                                 	<option value="1">US Driver's license</option>
                                                                 	<option value="2">State Issued ID </option>
-                                                                	
+
                                                                 </select>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                         </div>
-                                        
+
                                         <!-- Driver's license -->
 
                                         @switch($taxPayerIdType)
@@ -66,7 +66,7 @@
                                                                     @error('LicenseNumber') <span class="error text-danger">*</span> @enderror
                                                                 </label><br/>
                                                                 <input wire:model="LicenseNumber" type="text" class="form-control col-md-4" >
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -82,7 +82,7 @@
                                                                     @error('IDNumber') <span class="error text-danger">*</span> @enderror
                                                                 </label><br/>
                                                                 <input wire:model="IDNumber" type="text" placeholder="State Issued Number" class="form-control col-md-4" >
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -99,13 +99,18 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issuing State </label><br/>
+<<<<<<< HEAD
+                                                                <select wire:model="IDIssueState" class="form-control mt-2 light-grey">
+                                                                	<option value="3">NY</option>
+=======
                                                                 <select wire:model="IssuingState" class="form-control mt-2 light-grey">
                                                                     <option>-----</option>
                                                                     @foreach($states as $state)
                                                                     <option value="{{ $state->abbreviation }}">{{ $state->name }}</option>
                                                                     @endforeach
+>>>>>>> master
                                                                 </select>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -133,8 +138,8 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Expiration Date</label><br/>
-                                                                <input type="date" class="form-control col-md-4" >
-                                                                
+                                                                <input wire:model="IDExpirationDate" type="date" class="form-control col-md-4" >
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -145,8 +150,8 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issue Date</label><br/>
-                                                                <input type="date" class="form-control col-md-4" >
-                                                                
+                                                                <input wire:model="IDIssueDate" type="date" class="form-control col-md-4" >
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -159,15 +164,18 @@
 
                                         <div class="row">
 
+<<<<<<< HEAD
+=======
                                                  <div class="comment-area">
                                                               <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                                                                 <i class="fas fa-message"></i> Add Comment
                                                               </div>
                                                   </div>
                         
+>>>>>>> master
                                                     <div class="offset-md-5">
                                                         <div class="rows mr-auro">
-	                                                        
+
 	                                                        <div class="d-flex ">
 
 
@@ -180,10 +188,10 @@
                                                             </div>
 
                                                         </div>
-                                                            
+
                                                     </div>
-                                                        
-                                                </div>	
+
+                                                </div>
 
 
                                         </div>
@@ -195,7 +203,7 @@
                                         <div class="{{ $currentStep != 2 ? 'display-none' : '' }} " id="step-2">
 
                                          <div class="row mt-4">
-      
+
                                                     <div class="col-md-4 ml-5">
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
@@ -206,7 +214,7 @@
                                                                 	<option value="2">State Issued ID </option>
                                                                 	<option value="3">None</option>
                                                                 </select>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -220,8 +228,8 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Spouse License Number</label><br/>
-                                                                <input type="text" class="form-control col-md-4" >
-                                                                
+                                                                <input wire:model="SpouseLicenseNumber" type="text" class="form-control col-md-4" >
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -234,8 +242,8 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Spouse ID Number</label><br/>
-                                                                <input type="text" placeholder="State Issued Number" class="form-control col-md-4" >
-                                                                
+                                                                <input wire:model="spouseIDNo" type="text" placeholder="State Issued Number" class="form-control col-md-4" >
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -251,13 +259,18 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issuing State </label><br/>
+<<<<<<< HEAD
+                                                                <select class="form-control mt-2 light-grey" wire:model="SpouseIssuingState">
+                                                                	<option value="3">NY</option>
+=======
                                                                 <select wire:model="SpouseIssuingState" class="form-control mt-2 light-grey">
                                                                     <option>-----</option>
                                                                     @foreach($states as $state)
                                                                     <option value="{{ $state->abbreviation }}">{{ $state->name }}</option>
                                                                     @endforeach
+>>>>>>> master
                                                                 </select>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -288,8 +301,8 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Expiration Date</label><br/>
-                                                                <input type="date" class="form-control col-md-4" >
-                                                                
+                                                                <input type="date" class="form-control col-md-4" wire:model="SpouseIDExpirationDate" >
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -300,17 +313,20 @@
                                                         <div class="form-group">
                                                             <div class="form-group light-grey">
                                                                 <label for="">Issue Date</label><br/>
-                                                                <input type="date" class="form-control col-md-4" >
-                                                                
+                                                                <input type="date" class="form-control col-md-4" wire:model="SpouseSpouseIDExpirationDate">
+
                                                             </div>
                                                         </div>
                                                     </div>
                                         </div>
 
 
-                                        	
+
                                           <div class="row">
 
+<<<<<<< HEAD
+                                                    <div class="">
+=======
                                             <div class="comment-area">
                                                               <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                                                                 <i class="fas fa-message"></i> Add Comment
@@ -318,8 +334,9 @@
                                                   </div>
                         
                                                     <div class="offset-md-2">
+>>>>>>> master
                                                         <div class="rows mr-auro">
-	                                                        
+
 	                                                        <div class="d-flex ">
 
 	                                                                <div class="">
@@ -337,17 +354,17 @@
                                                             </div>
 
                                                         </div>
-                                                            
+
                                                     </div>
-                                                        
+
                                                 </div>
                                         </div>
                                         {{-- End Step 2 --}}
 
-                                        
 
 
-                                        
+
+
 
 
 

@@ -9,350 +9,12 @@ font-size: .9rem;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 html,
 body {
- 
-}
-
-.text-info{
-  color: #4C78A4 !important;
-  font-size: .9em;
-}
-
-.site-logo{
-  width: 240px;
-  height: 120px;
-  margin-left: 140px;
-}
-
-.top-nav-bar a{
-  color: #9f9ea1;
-}
-
-.text-light{
-  color: #9f9ea1;
-}
-
-.text-grey{
-  color: #c7c7c7;
-}
-
-.inner-wrapper{
-  margin-top: -10px;
-  /*background-image: linear-gradient(to right, red , yellow);*/
-  background-image: linear-gradient(to right, #8764AA,#4C78A4,#5fb774); 
-  
-}
-
-.bread-crumbs{
-  color: #ffffff;
-  width: 400px;
-}
-
-
-.artboard{
-  background-color: #ffffff;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  
-  display:flex;
-  flex-direction:column;
-}
-
-.side-bar-wrapper{
-  background-color: #f9f7fb;
-  border-top-left-radius: 6px;
-  padding-top:2.5em;
-  padding-left: 0px;
-  padding-right: 0px;
-  
-  
-}
-
-.sidebar{
-  height: 100vh;
-  flex:1; 
-}
-
-
-
-
-#progress-bar-container {
-  width: 100%;
-  height: 17px;
-  
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 35px;
-  border: 1px solid #c8ebff;
-  overflow: hidden;
-}
-
-.progress-bar-child {
-  width: 100%;
-  height: 100%;
-}
-
-.progress {
-  color: white;
-  text-align: center;
-  line-height: 85px;
-  font-size: 35px;
-  font-family: "Segoe UI";
-  animation-direction: reverse;
-  background: #ffffff;
-  
-}
-
-.pr-bg-start{
- background: linear-gradient(to right, #8764AA 100%, #4C78A4 0%, #2B9392 0%);
-}
-
-.pr-bg-mid{
- background: linear-gradient(to right, #8764AA 70%, #4C78A4 100%, #2B9392 0%);
-}
-
-.pr-bg-end{
- background: linear-gradient(to right, #8764AA 40%, #4C78A4 50%, #2B9392 100%);
-}
-
-
-.tax-year-port-wrapper select{
-  border: none ;
-  background-color: #f9f7fb;
-  position: absolute;
-  margin-top: 1;
-  
-}
-
-.tax-year-port-wrapper select{
-  font-size: 1.1em;
-  color: #ababab;
-}
-
-.progress-text{
- color: #ababab;
-}
-
-.side-bar-wrapper{
-  /*height: 100%;*/
-  transition: left 0.4s ease;
-  
-}
-
-
-.dark-grey{
-  width: 100%;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #808080;
-  text-align: left;
-  background-color: #f2eef9;
-}
-
-
-.light-grey {
-  color: #818589;
-}
-
-.light-blue {
-  color: #4C78A4;
-}
-
-.content-port{
-  margin-left: 80px;
-}
-
-.margin-big {
-  margin-top: 7rem; }
-
-.button_primary {
-  background-color: #0074c8; 
-}
-
-
-.btn-site-main {
-  color: #fff;
-  background-color: #8764AA;
-  border-color: #8764AA;
-}
-
-.btn-site-primary:hover {
-  color: #fff;
-  background-color: #8764AA;
-  border-color: #8764AA;
-}
-
-.btn-outline-secondary:active,.btn-outline-secondary.focus {
-  color: #fff;
-  background-color: #8764AA !important;
-  border-color: #8764AA;
-}
-
-.btn-site-primary:focus {
- /* box-shadow: 0 0 0 0rem #8764AA !important;*/
-}
-
-.btn-active{
-  color: #fff;
-  background-color: #8764AA;
-  border-color: #8764AA;
-}
-
-.btn-check:active + .btn-outline-secondary, .btn-check:checked + .btn-outline-secondary, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show, .btn-outline-secondary:active{
-  background-color: #8764AA !important;
-  border-color: #8764AA !important;
-  box-shadow: 0 0 0 0rem #8764AA !important;
-}
-
-.btn-outline-info, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show, .btn-outline-info:active {
-  
-}
-
-.breadcrumb li a{
-  
-}
-
-#file_names,#file_name2, #file_name3 , #file_name4, #file_name5, #file_name6, #file_name7, #file_name8, #file_name9{
-  font-size: 17px;
-  color: #8764AA;
 
 }
 
-.cs-file-upload{
-  position: relative;
-  overflow: hidden;
-}
-
-.cs-file-upload input{
-  position: absolute;
-  font-size: 20px;
-  opacity: 0;
-  right: 0;
-  top: 0;
-}
-
-.cs-breadcrumbs li{
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-}
-
-.cs-breadcrumbs li a{
-   text-decoration: none !important;
-}
-
-.section-active {
-  border-bottom: 2px solid #000 !important;
-}
-
-.error{
-  color: red;
-}
-
-.display-none{
-  display: none;
-}
-
-.clear-both{
-  clear: both;
-}
-
-
-/* Tooltip container */
-.cs-tooltip {
-  position: relative;
-  display: inline-block;
- 
-}
-
-/* Tooltip text */
-.cs-tooltip .cs-tooltiptext {
-  visibility: hidden;
-  background-color: #4C78A4;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  border-radius: 6px;
-
-   width: 500px;
-   bottom: 100%;
-   left: 50%;
-   margin-left: -60px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.cs-tooltip:hover .cs-tooltiptext {
-  visibility: visible;
-}
-
-.cs-tooltip .cs-tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
-  left: 15%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #4C78A4 transparent transparent transparent;
-}
-
-.comment-area{
-  width: 150px;
-  background-color: #ededed;
-  font-size:.7em;
-  position: relative;
-  top:78px;
-  color: #4C78A4;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  border-radius: 5px;
-  cursor:pointer;
-}
-
-/*.btn-site-primary.disabled, .btn-site-primary:disabled {
-  color: #6c757d;
-  background-color: transparent;
-}
-
-.btn-site-primary:not(:disabled):not(.disabled):active, .btn-site-primary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-secondary.dropdown-toggle {
-  color: #fff;
-  background-color: #8764AA;
-  border-color: #8764AA;
-}
-
-.btn-site-primary:not(:disabled):not(.disabled):active:focus, .btn-site-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-site-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem #8764AA;
-}*/
-
-.bottom {
-  width: 100%;
-  height: 50px;
-  background-color: blue;
-}
-
-/*.box {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-}
-.box .row.content {
-  flex: 1 1 auto;
-}*/
-
-.top-nav-active{
-  color: #8764AA !important;
-  border-bottom: 1px solid #8764AA !important;
-}
-
-/* New Styles */
 label{
-  
+  font-weight: 200;
+  font-size: 14px;
 }
 
 .col-form-label
@@ -383,12 +45,13 @@ label{
   justify-content: space-between;
 }
 
-/*.text-info{
+.text-info{
+<<<<<<< HEAD
   color: #5b7ca3;
   font-size: .8em;
   font-weight: 200;
   text-align: justify;
-}*/
+}
 
 .rental-multibusiness-toggler
 {
@@ -426,6 +89,17 @@ label{
 .my-container{width: 250px; height: 38px; margin: 100px auto;}
 
 div label input {margin-right: 100px;}
+
+.multi-year-options
+{
+  display: flex;
+  column-gap: 10px;
+}
+
+.multi-year-btn-container
+{
+  position: relative;
+}
 
 .multi-year-btn{
   margin: 2px;
@@ -481,6 +155,21 @@ div label input {margin-right: 100px;}
 {
   background-color: #8764AA;
   color: #fff;
+}
+
+.completed-year-check-mark
+{
+  position: relative;
+  top: -10px;
+  padding: 5px;
+  background: green;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 8px;
+  z-index: 99999;
+  color: white;
+  right: 14px;
+  width: 20px;
 }
 /* end of multibutton select */
 
@@ -545,21 +234,415 @@ div label input {margin-right: 100px;}
   border-radius: 25px;
 }
 
-@media only screen and (max-width: 768px) {
+.number-of-forms
+{
+  /* width: 50px; */
+=======
+  color: #4C78A4 !important;
+  font-size: .9em;
+>>>>>>> master
+}
 
+.site-logo{
+  width: 240px;
+  height: 120px;
+}
+
+.top-nav-bar a{
+  color: #9f9ea1;
+}
+
+.text-light{
+  color: #9f9ea1;
+}
+
+.text-grey{
+  color: #c7c7c7;
+}
+
+.inner-wrapper{
+  margin-top: -10px;
+  /*background-image: linear-gradient(to right, red , yellow);*/
+  background-image: linear-gradient(to right, #8764AA,#4C78A4,#5fb774);
+
+}
+
+.bread-crumbs{
+  color: #ffffff;
+  width: 400px;
+}
+
+
+.artboard{
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.side-bar-wrapper{
+  background-color: #f9f7fb;
+  border-top-left-radius: 6px;
+  padding-top:2.5em;
+  padding-left: 0px;
+  padding-right: 0px;
+
+
+}
+
+.sidebar{
+  height: 100vh;
+  flex:1;
 }
 
 
 
 
-@media (min-width: 576px) { 
+#progress-bar-container {
+  width: 100%;
+  height: 17px;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 35px;
+  border: 1px solid #c8ebff;
+  overflow: hidden;
+}
+
+.progress-bar-child {
+  width: 100%;
+  height: 100%;
+}
+
+.progress {
+  color: white;
+  text-align: center;
+  line-height: 85px;
+  font-size: 35px;
+  font-family: "Segoe UI";
+  animation-direction: reverse;
+  background: #ffffff;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 9d9d83e (Added an active class to the top nav)
+
+/*#8764AA - Purple
+#4C78A4 - Blue
+#2B9392 - Green*/
+  /* Chrome10-25,Safari5.1-6 */
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> parent of 9d9d83e (Added an active class to the top nav)
+  
+>>>>>>> master
+}
+
+.pr-bg-start{
+ background: linear-gradient(to right, #8764AA 100%, #4C78A4 0%, #2B9392 0%);
+}
+
+.pr-bg-mid{
+ background: linear-gradient(to right, #8764AA 70%, #4C78A4 100%, #2B9392 0%);
+}
+
+.pr-bg-end{
+ background: linear-gradient(to right, #8764AA 40%, #4C78A4 50%, #2B9392 100%);
+}
+
+
+.tax-year-port-wrapper select{
+  border: none ;
+  background-color: #f9f7fb;
+  position: absolute;
+  margin-top: 1;
+
+}
+
+.tax-year-port-wrapper select{
+  font-size: 1.1em;
+  color: #ababab;
+}
+
+.progress-text{
+ color: #ababab;
+}
+
+.side-bar-wrapper{
+  bottom: 0;
+  transition: left 0.4s ease;
+
+}
+
+
+.dark-grey{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #808080;
+  text-align: left;
+  background-color: #f2eef9;
+}
+
+
+.light-grey {
+  color: #818589;
+}
+
+.light-blue {
+  color: #4C78A4;
+}
+
+.content-port{
+  margin-left: 80px;
+}
+
+.margin-big {
+  margin-top: 7rem; }
+
+.button_primary {
+  background-color: #0074c8;
+}
+
+
+.btn-site-main {
+  color: #fff;
+  background-color: #8764AA;
+  border-color: #8764AA;
+}
+
+.btn-site-primary:hover {
+  color: #fff;
+  background-color: #8764AA;
+  border-color: #8764AA;
+}
+
+.btn-outline-secondary:active,.btn-outline-secondary.focus {
+  color: #fff;
+  background-color: #8764AA !important;
+  border-color: #8764AA;
+}
+
+.btn-site-primary:focus {
+ /* box-shadow: 0 0 0 0rem #8764AA !important;*/
+}
+
+.btn-active{
+  color: #fff;
+  background-color: #8764AA;
+  border-color: #8764AA;
+}
+
+.btn-check:active + .btn-outline-secondary, .btn-check:checked + .btn-outline-secondary, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show, .btn-outline-secondary:active{
+  background-color: #8764AA !important;
+  border-color: #8764AA !important;
+  box-shadow: 0 0 0 0rem #8764AA !important;
+}
+
+.btn-outline-info, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show, .btn-outline-info:active {
+
+}
+
+.breadcrumb li a{
+
+}
+
+#file_names,#file_name2, #file_name3 , #file_name4, #file_name5, #file_name6, #file_name7, #file_name8, #file_name9{
+  font-size: 17px;
+  color: #8764AA;
+
+}
+
+.cs-file-upload{
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-file-upload input{
+  position: absolute;
+  font-size: 20px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.cs-breadcrumbs li{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.cs-breadcrumbs li a{
+   text-decoration: none !important;
+}
+
+.section-active {
+  border-bottom: 2px solid #000 !important;
+}
+
+.error{
+  color: red;
+}
+
+.display-none{
+  display: none;
+}
+
+.clear-both{
+  clear: both;
+}
+
+
+<<<<<<< HEAD
+/* button checkbox */
+
+.button-checkbox{
+    margin: 4px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #6c757d;
+    border-color: #6c757d;
+    overflow: hidden;
+    float: left;
+  }
+
+  .button-checkbox label {
+    float: left; line-height: 3.0em;
+    width: 8.0em; height: 3.0em;
+  }
+
+  .button-checkbox label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+  }
+
+  .button-checkbox label input {
+    position: absolute;
+    display: none;
+    color: #6c757d !important;
+  }
+  /* selects all of the text within the input element and changes the color of the text */
+  .button-checkbox label input + span{color: #6c757d;}
+
+
+  /* This will declare how a selected input will look giving generic properties */
+  .button-checkbox input:checked + span {
+      color: #fff;
+      text-shadow: 0 0  6px rgba(0, 0, 0, 0.8);
+      background-color: #8764AA;
+  }
+
+
+=======
+/* Tooltip container */
+.cs-tooltip {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+/* Tooltip text */
+.cs-tooltip .cs-tooltiptext {
+  visibility: hidden;
+  background-color: #4C78A4;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+
+   width: 500px;
+   bottom: 100%;
+   left: 50%;
+   margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.cs-tooltip:hover .cs-tooltiptext {
+  visibility: visible;
+}
+
+.cs-tooltip .cs-tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 15%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #4C78A4 transparent transparent transparent;
+}
+
+.comment-area{
+  width: 150px;
+  background-color: #ededed;
+  font-size:.7em;
+  position: relative;
+  top:78px;
+  color: #4C78A4;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 5px;
+  cursor:pointer;
+}
+>>>>>>> master
+
+/*.btn-site-primary.disabled, .btn-site-primary:disabled {
+  color: #6c757d;
+  background-color: transparent;
+}
+
+.btn-site-primary:not(:disabled):not(.disabled):active, .btn-site-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #8764AA;
+  border-color: #8764AA;
+}
+
+.btn-site-primary:not(:disabled):not(.disabled):active:focus, .btn-site-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-site-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #8764AA;
+}*/
+
+.bottom {
+  width: 100%;
+  height: 50px;
+  background-color: blue;
+}
+
+/*.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.box .row.content {
+  flex: 1 1 auto;
+}*/
+
+@media only screen and (max-width: 768px) {
+
+}//
+
+
+
+
+@media (min-width: 576px) {
 
  }
 
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
-    
+
  }
 
 
