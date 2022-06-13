@@ -10,7 +10,6 @@ class IncomeController extends Controller
     	return view('income.wages');
     }
 
-<<<<<<< HEAD
 
     public function showForeignIncome(){
     	return view('income.foreign-income');
@@ -19,14 +18,6 @@ class IncomeController extends Controller
     public function showBusinessIncome()
     {
         return view('income.business-income');
-=======
-    public function showForeignErnedIncome(){
-    	return view('income.foreign_erned_income');
-    }
-
-    public function showBusinessIncome(){
-    	return view('income.business_income');
->>>>>>> master
     }
 
     public function showRentalIncome()

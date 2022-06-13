@@ -46,7 +46,6 @@ label{
 }
 
 .text-info{
-<<<<<<< HEAD
   color: #5b7ca3;
   font-size: .8em;
   font-weight: 200;
@@ -237,10 +236,8 @@ div label input {margin-right: 100px;}
 .number-of-forms
 {
   /* width: 50px; */
-=======
   color: #4C78A4 !important;
   font-size: .9em;
->>>>>>> master
 }
 
 .site-logo{
@@ -594,7 +591,7 @@ div label input {margin-right: 100px;}
   border-radius: 5px;
   cursor:pointer;
 }
->>>>>>> master
+
 
 /*.btn-site-primary.disabled, .btn-site-primary:disabled {
   color: #6c757d;
